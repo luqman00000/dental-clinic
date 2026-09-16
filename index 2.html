@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Sri Sai Dental Clinic and Implant Center | Premium Dental Care</title>
+
+    <meta name="description"
+          content="Sri Sai Dental Clinic and Implant Center provides professional dental care including dental implants, root canal treatment, teeth cleaning, braces, gum care, and cosmetic dentistry in Tirupati.">
+
+    <meta name="keywords"
+          content="dentist Tirupati, dental clinic Tirupati, dental implants, root canal, braces, teeth cleaning, periodontist, Dr M Haritha">
+
+    <meta name="author" content="Sri Sai Dental Clinic and Implant Center">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sri Sai Dental Clinic and Implant Center | Premium Dental Care">
+    <meta property="og:description"
+          content="Transforming Smiles with Care. Professional dental care with modern technology in Tirupati.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+
+    <style>
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #087f8c;
+            --primary-dark: #05616b;
+            --accent: #d8b36a;
+            --dark: #102a2e;
+            --text: #52676b;
+            --light: #f5fbfb;
+            --white: #ffffff;
+            --border: #e5eeee;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--dark);
+            font-size: clamp(32px, 5vw, 48px);
+            margin: 10px 0 15px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* ==============================
+           BUTTON ANIMATIONS & STYLES
+        ============================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 23px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn:active {
+            transform: scale(0.97) translateY(0) !important;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-solid {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(8, 127, 140, 0.3);
+        }
+
+        .btn-solid:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(8, 127, 140, 0.4);
+            color: white;
+        }
+
+        /* Pulse Keyframes for CTA Buttons */
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(8, 127, 140, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(8, 127, 140, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(8, 127, 140, 0);
+            }
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Floating Buttons Animation */
+        .floating-btn {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+            font-size: 20px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) rotate(8deg);
+            background: var(--primary-dark);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+        }
+
+        /* ==============================
+           TOP BAR
+        ============================== */
+
+        .topbar {
+            background: var(--dark);
+            color: white;
+            font-size: 13px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            gap: 22px;
+        }
+
+        .topbar i {
+            color: var(--accent);
+            margin-right: 6px;
+        }
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .logo-img-wrapper {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fffdf5;
+            border-radius: 12px;
+            padding: 3px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transition: transform 0.4s ease;
+            overflow: hidden;
+        }
+
+        .logo:hover .logo-img-wrapper {
+            transform: scale(1.05) rotate(4deg);
+        }
+
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 25px;
+            color: var(--dark);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 720px;
+            background:
+                linear-gradient(90deg,
+                rgba(8,127,140,0.96) 0%,
+                rgba(8,127,140,0.82) 45%,
+                rgba(8,127,140,0.20) 100%),
+                url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            margin-bottom: 22px;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.1;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 590px;
+            opacity: 0.92;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* ==============================
+           STATS
+        ============================== */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(16,42,46,0.12);
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border: none;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-size: 30px;
+        }
+
+        .stat p {
+            font-size: 13px;
+        }
+
+        /* ==============================
+           SERVICES
+        ============================== */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            transition: 0.35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(8,127,140,0.12);
+            border-color: rgba(8,127,140,0.25);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            background: #e8f7f8;
+            color: var(--primary);
+            font-size: 22px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .service-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+        }
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 560px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .experience {
+            position: absolute;
+            bottom: 25px;
+            right: -25px;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .experience strong {
+            display: block;
+            color: var(--primary);
+            font-size: 35px;
+        }
+
+        .about-content span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--dark);
+            font-size: 45px;
+            line-height: 1.15;
+            margin: 12px 0 20px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            color: var(--dark);
+        }
+
+        .check-list i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        /* ==============================
+           WHY US
+        ============================== */
+
+        .why {
+            background: var(--dark);
+            color: white;
+        }
+
+        .why .section-title h2 {
+            color: white;
+        }
+
+        .why .section-title p {
+            color: #c2d4d6;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .why-card i {
+            color: var(--accent);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #b9ccce;
+            font-size: 14px;
+        }
+
+        /* ==============================
+           DENTIST
+        ============================== */
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .doctor-image img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        .doctor-info span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .doctor-info h2 {
+            color: var(--dark);
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        .qualification {
+            display: inline-block;
+            padding: 7px 13px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        /* ==============================
+           TESTIMONIALS
+        ============================== */
+
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .stars {
+            color: #e0ac38;
+            margin-bottom: 18px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .patient {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        /* ==============================
+           FAQ
+        ============================== */
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 22px 0;
+            border: none;
+            background: none;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            color: var(--dark);
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* ==============================
+           APPOINTMENT
+        ============================== */
+
+        .appointment {
+            background: var(--light);
+        }
+
+        .appointment-box {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(16,42,46,0.08);
+        }
+
+        .appointment-info {
+            padding: 50px;
+            background: var(--dark);
+            color: white;
+        }
+
+        .appointment-info h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-detail {
+            margin-top: 25px;
+        }
+
+        .contact-detail div {
+            display: flex;
+            gap: 15px;
+            margin: 18px 0;
+        }
+
+        .contact-detail i {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .appointment-form {
+            padding: 50px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(8,127,140,0.08);
+        }
+
+        /* ==============================
+           MAP
+        ============================== */
+
+        .map {
+            width: 100%;
+            height: 380px;
+            border: 0;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #081d20;
+            color: #a9c0c3;
+            padding-top: 70px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #a9c0c3;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .socials a {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .socials a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 0;
+            font-size: 13px;
+        }
+
+        /* ==============================
+           FLOATING BUTTONS
+        ============================== */
+
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 2000;
+        }
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .topbar-right {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .stat:nth-child(2) {
+                border: none;
+            }
+
+            .service-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .doctor-grid,
+            .appointment-box {
+                grid-template-columns: 1fr;
+            }
+
+            .experience {
+                right: 15px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .topbar-left {
+                gap: 10px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats-grid,
+            .service-grid,
+            .testimonial-grid,
+            .why-grid,
+            .footer-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border: none;
+            }
+
+            .about-image img,
+            .doctor-image img {
+                height: 400px;
+            }
+
+            .about-content h2,
+            .doctor-info h2 {
+                font-size: 36px;
+            }
+
+            .appointment-info,
+            .appointment-form {
+                padding: 30px;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ==============================
+     TOP BAR
+================================ -->
+
+<div class="topbar">
+    <div class="container topbar-content">
+
+        <div class="topbar-left">
+            <span>
+                <i class="fa-solid fa-clock"></i>
+                Mon - Sat: 9:00 AM - 8:00 PM
+            </span>
+        </div>
+
+        <div class="topbar-right">
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                9493647007 / 8309375639
+            </span>
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Tirupati, A.P.
+            </span>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ==============================
+     NAVBAR
+================================ -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+
+                <div class="logo-img-wrapper">
+                    <img src="logo.png" alt="Sri Sai Dental Logo">
+                </div>
+
+                <div class="logo-text">
+                    SRI SAI
+                    <span>Dental Clinic & Implant Center</span>
+                </div>
+
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctor">Dentist</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+
+                <li>
+                    <a href="#appointment" class="nav-cta">
+                        Book Appointment
+                    </a>
+                </li>
+
+            </ul>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ==============================
+     HERO
+================================ -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-star"></i>
+                Transforming Smiles with Care
+            </div>
+
+            <h1>
+                SRI SAI Dental Clinic & Implant Center
+            </h1>
+
+            <p>
+                Experience modern, comfortable, and personalized dental care guided by Dr. M. Haritha, MDS.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="btn btn-primary">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book Appointment
+                </a>
+
+                <a href="tel:+919493647007" class="btn btn-outline">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     STATS
+================================ -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <h3>10+</h3>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="stat">
+                <h3>5K+</h3>
+                <p>Happy Patients</p>
+            </div>
+
+            <div class="stat">
+                <h3>4.9★</h3>
+                <p>Patient Rating</p>
+            </div>
+
+            <div class="stat">
+                <h3>15+</h3>
+                <p>Dental Services</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     SERVICES
+================================ -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Services</span>
+
+            <h2>Complete Dental Care</h2>
+
+            <p>
+                From preventive care to advanced implant treatments,
+                we provide comprehensive dental solutions.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+
+                <h3>General Dentistry & Cleaning</h3>
+
+                <p>
+                    Professional cleaning and oral health care to maintain healthy teeth and gums.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth"></i>
+                </div>
+
+                <h3>Dental Implants</h3>
+
+                <p>
+                    Advanced and permanent natural-looking tooth replacement solutions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth-open"></i>
+                </div>
+
+                <h3>Braces & Orthodontics</h3>
+
+                <p>
+                    Orthodontic treatments for healthier, beautifully aligned teeth.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+
+                <h3>Root Canal Treatment</h3>
+
+                <p>
+                    Modern root canal therapy focused on preserving your natural teeth comfortably.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                </div>
+
+                <h3>Gum Care & Treatment</h3>
+
+                <p>
+                    Specialized periodontics and gum disease treatments by expert specialists.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+
+                <h3>Teeth Whitening & Extractions</h3>
+
+                <p>
+                    Cosmetic whitening treatments and safe, pain-free dental extractions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT
+================================ -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="image.jpg.jpeg"
+                    alt="Modern dental clinic chair and equipment">
+
+                <div class="experience">
+
+                    <strong>10+</strong>
+
+                    Years of
+                    Experience
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span>About Our Clinic</span>
+
+                <h2>
+                    Modern Dentistry.
+                    Personal Care.
+                </h2>
+
+                <p>
+                    At Sri Sai Dental Clinic and Implant Center, our goal is to provide high-quality, comprehensive dental care in a welcoming and comfortable setting.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Expert Periodontist & Implantologist
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        State-of-the-art dental technology
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Patient-centered, compassionate treatment
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Hygienic and safe environment
+                    </li>
+
+                </ul>
+
+                <a href="#appointment" class="btn btn-solid">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     WHY CHOOSE US
+================================ -->
+
+<section class="section why">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose Us</span>
+
+            <h2>Dental Care You Can Trust</h2>
+
+            <p>
+                We combine experience, technology and personalized care to create a better dental experience.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <h3>Experienced Dentist</h3>
+
+                <p>
+                    Professional care from an experienced Periodontist & Implantologist.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-microscope"></i>
+
+                <h3>Modern Technology</h3>
+
+                <p>
+                    Advanced equipment supporting precise diagnostic and treatment plans.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <h3>Patient Safety</h3>
+
+                <p>
+                    Uncompromised focus on hygiene, sterilization, and patient comfort.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>Personalized Care</h3>
+
+                <p>
+                    Tailored treatment routines crafted around each patient's specific needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     DOCTOR
+================================ -->
+
+<section class="section" id="doctor">
+
+    <div class="container">
+
+        <div class="doctor-grid">
+
+            <div class="doctor-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=85"
+                    alt="Dr. M. Haritha">
+
+            </div>
+
+
+            <div class="doctor-info">
+
+                <span>Meet Your Dentist</span>
+
+                <h2>
+                    Dr. M. HARITHA
+                </h2>
+
+                <div class="qualification">
+
+                    MDS (Periodontist & Implantologist)
+
+                </div>
+
+                <p>
+                    Dr. M. Haritha is dedicated to providing specialized, highly effective, and patient-focused dental treatments.
+                </p>
+
+                <br>
+
+                <p>
+                    With extensive expertise in periodontics and dental implantology, her focus is on gentle, long-lasting, and aesthetic dental care.
+                </p>
+
+                <br>
+
+                <a href="#appointment" class="btn btn-solid">
+
+                    Meet the Dentist
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     TESTIMONIALS
+================================ -->
+
+<section class="section testimonials" id="reviews">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Patient Reviews</span>
+
+            <h2>What Our Patients Say</h2>
+
+            <p>
+                Real experiences from our valued patients.
+            </p>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The clinic is extremely clean and Dr. Haritha explained the entire procedure clearly. Very gentle care!"
+                </p>
+
+                <div class="patient">
+                    — Patient Review
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Excellent experience for dental implants. Highly professional and painless treatment."
+                </p>
+
+                <div class="patient">
+                    — Patient Review
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Best dental clinic in Tirupati! Highly recommended for root canal and gum treatments."
+                </p>
+
+                <div class="patient">
+                    — Patient Review
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     FAQ
+================================ -->
+
+<section class="section" id="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>FAQ</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+
+        <div class="faq-container">
+
+            <div class="faq">
+
+                <button class="faq-question">
+
+                    How can I book an appointment?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can book through our online booking page or call us directly at 9493647007 / 8309375639.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <button class="faq-question">
+
+                    What dental services do you provide?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We offer General Dentistry, Dental Implants, Braces & Orthodontics, Root Canal Treatment, Gum Treatments, Teeth Whitening, and Extractions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <button class="faq-question">
+
+                    Do I need an appointment?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Appointments are recommended to ensure dedicated time with the doctor for your visit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <button class="faq-question">
+
+                    Where is the clinic located?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We are located at Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.).
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     APPOINTMENT
+================================ -->
+
+<section class="section appointment" id="appointment">
+
+    <div class="container">
+
+        <div class="appointment-box">
+
+            <div class="appointment-info">
+
+                <h2>
+                    Book Your Visit
+                </h2>
+
+                <p>
+                    Take the first step toward better dental health. Request an appointment today.
+                </p>
+
+
+                <div class="contact-detail">
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            9493647007<br>
+                            8309375639
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            srisaidental@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            Mon - Sat<br>
+                            9:00 AM - 8:00 PM
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="appointment-form">
+
+                <form id="appointmentForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Your phone"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="time"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label>
+                                Service
+                            </label>
+
+                            <select id="service">
+
+                                <option>
+                                    Select a service
+                                </option>
+
+                                <option>
+                                    General Dentistry & Cleaning
+                                </option>
+
+                                <option>
+                                    Dental Implants
+                                </option>
+
+                                <option>
+                                    Braces & Orthodontics
+                                </option>
+
+                                <option>
+                                    Root Canal Treatment
+                                </option>
+
+                                <option>
+                                    Gum Care & Treatment
+                                </option>
+
+                                <option>
+                                    Teeth Whitening / Extraction
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label>
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                placeholder="Tell us how we can help..."></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-solid" style="width:100%;">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        Request Appointment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     GOOGLE MAP (TIRUPATI)
+================================ -->
+
+<section>
+
+    <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Chandragiri+Road,+Tirupati,+Andhra+Pradesh+517502&output=embed"
+        loading="lazy"
+        title="Clinic location - Tirupati">
+    </iframe>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="logo" style="color:white;">
+
+                    <div class="logo-img-wrapper">
+                        <img src="logo.png" alt="Sri Sai Dental Clinic Logo">
+                    </div>
+
+                    <div class="logo-text">
+                        SRI SAI
+                        <span style="color:#d8b36a;">Dental Clinic & Implant Center</span>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <p>
+                    Transforming Smiles with Care. Professional dental care led by Dr. M. Haritha, MDS.
+                </p>
+
+
+                <div class="socials">
+
+                    <!-- Instagram App Deep Link -->
+                    <a href="instagram://user?username=srisaidentalclinic" onclick="openAppDeepLink(event, 'instagram://user?username=srisaidentalclinic', 'https://instagram.com');" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- Facebook App Deep Link -->
+                    <a href="fb://page" onclick="openAppDeepLink(event, 'fb://page', 'https://facebook.com');" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- YouTube App Deep Link -->
+                    <a href="vnd.youtube://" onclick="openAppDeepLink(event, 'vnd.youtube://', 'https://youtube.com');" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#doctor">Meet Dentist</a></li>
+                    <li><a href="#reviews">Patient Reviews</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#appointment">Book Appointment</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Services</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="#services">General Dentistry</a></li>
+                    <li><a href="#services">Dental Implants</a></li>
+                    <li><a href="#services">Braces & Orthodontics</a></li>
+                    <li><a href="#services">Root Canal Treatment</a></li>
+                    <li><a href="#services">Gum Care & Whitening</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
+                    </li>
+
+                    <li>
+                        Ph: 9493647007 / 8309375639
+                    </li>
+
+                    <li>
+                        Mon - Sat: 9 AM - 8 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 SRI SAI Dental Clinic and Implant Center. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==============================
+     FLOATING BUTTONS
+================================ -->
+
+<div class="floating-buttons">
+
+    <a
+        href="https://wa.me/919493647007"
+        target="_blank"
+        class="floating-btn"
+        aria-label="WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <a
+        href="tel:+919493647007"
+        class="floating-btn"
+        aria-label="Call">
+
+        <i class="fa-solid fa-phone"></i>
+
+    </a>
+
+</div>
+
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
+<script>
+
+    /* ==============================
+       APP DEEP LINK ROUTER
+    ============================== */
+    function openAppDeepLink(event, appUri, webFallback) {
+        event.preventDefault();
+        const start = Date.now();
+        window.location.href = appUri;
+
+        setTimeout(function() {
+            if (Date.now() - start < 2000) {
+                window.location.href = webFallback;
+            }
+        }, 1200);
+    }
+
+    /* ==============================
+       MOBILE MENU
+    ============================== */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    /* Close menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+
+    /* ==============================
+       FAQ
+    ============================== */
+
+    document.querySelectorAll(".faq-question").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const faq = button.parentElement;
+
+            faq.classList.toggle("active");
+
+            const icon = button.querySelector("i");
+
+            if (faq.classList.contains("active")) {
+
+                icon.classList.remove("fa-plus");
+                icon.classList.add("fa-minus");
+
+            } else {
+
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
+
+            }
+
+        });
+
+    });
+
+
+    /* ==============================
+       APPOINTMENT FORM
+    ============================== */
+
+    document.getElementById("appointmentForm")
+        .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value;
+
+        const clinicNumber = "919493647007";
+
+        const whatsappMessage =
+            `Hello, I would like to request a dental appointment at Sri Sai Dental Clinic.
+
+Name: ${name}
+Phone: ${phone}
+Date: ${date}
+Time: ${time}
+Service: ${service}
+Message: ${message}`;
+
+        const whatsappURL =
+            `https://wa.me/${clinicNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+
+    /* ==============================
+       SET MINIMUM DATE
+    ============================== */
+
+    const dateInput = document.getElementById("date");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
+
+</script>
+
+
+<!-- ==============================
+     STRUCTURED DATA / LOCAL SEO
+================================ -->
+
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Sri Sai Dental Clinic and Implant Center",
+    "description": "Transforming Smiles with Care. Professional dental clinic offering dental implants, gum treatments, and general dentistry in Tirupati.",
+    "telephone": "+919493647007",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road",
+        "addressLocality": "Tirupati",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "517502",
+        "addressCountry": "IN"
+    },
+    "openingHours": [
+        "Mo-Sa 09:00-20:00"
+    ]
+}
+
+</script>
+
+</body>
+</html>
