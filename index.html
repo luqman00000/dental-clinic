@@ -1,2846 +1,3810 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sri Sai Dental Clinic and Implant Center</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-:root{
-    --primary:#087f8c;
-    --primary-dark:#05616b;
-    --accent:#d8b36a;
-    --dark:#102a2e;
-    --text:#52676b;
-    --light:#f5fbfb;
-    --white:#ffffff;
-    --border:#e5eeee;
-}
-
-body{
-    font-family:"DM Sans",sans-serif;
-    color:var(--text);
-    background:white;
-    line-height:1.7;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button,
-input,
-textarea,
-select{
-    font-family:inherit;
-}
-
-.container{
-    width:min(1150px,92%);
-    margin:auto;
-}
-
-.section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-title span{
-    color:var(--primary);
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.section-title h2{
-    font-family:"Playfair Display",serif;
-    color:var(--dark);
-    font-size:clamp(32px,5vw,48px);
-    margin:10px 0 15px;
-}
-
-.section-title p{
-    max-width:650px;
-    margin:auto;
-}
-
-/* BUTTONS */
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-    padding:14px 23px;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
-    font-weight:700;
-    position:relative;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-}
-
-.btn:active{
-    transform:scale(.97);
-}
-
-.btn-solid{
-    background:var(--primary);
-    color:white;
-    box-shadow:0 4px 15px rgba(8,127,140,.3);
-}
-
-.btn-solid:hover{
-    background:var(--primary-dark);
-    box-shadow:0 8px 20px rgba(8,127,140,.4);
-}
-
-.btn-primary{
-    background:white;
-    color:var(--primary-dark);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.5);
-    color:white;
-    background:rgba(255,255,255,.08);
-}
-
-/* TOP BAR */
-
-.topbar{
-    background:var(--dark);
-    color:white;
-    font-size:13px;
-}
-
-.topbar-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:9px 0;
-}
-
-.topbar-left,
-.topbar-right{
-    display:flex;
-    gap:22px;
-}
-
-.topbar i{
-    color:var(--accent);
-    margin-right:6px;
-}
-
-/* NAVBAR */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(0,0,0,.05);
-}
-
-nav{
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:var(--dark);
-    font-weight:800;
-    font-size:18px;
-    line-height:1.2;
-}
-
-.logo-img-wrapper{
-    width:52px;
-    height:52px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fffdf5;
-    border-radius:12px;
-    padding:3px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    border:1px solid var(--border);
-    overflow:hidden;
-}
-
-.logo-img-wrapper img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-
-.logo-text span{
-    display:block;
-    font-size:11px;
-    font-weight:500;
-    color:var(--primary);
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    list-style:none;
-}
-
-.nav-links a{
-    color:var(--dark);
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--primary);
-}
-
-.nav-cta{
-    background:var(--primary);
-    color:white!important;
-    padding:12px 20px;
-    border-radius:10px;
-}
-
-.menu-btn{
-    display:none;
-    border:0;
-    background:transparent;
-    font-size:25px;
-    color:var(--dark);
-    cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-    min-height:720px;
-    background:
-    linear-gradient(
-        90deg,
-        rgba(8,127,140,.96) 0%,
-        rgba(8,127,140,.82) 45%,
-        rgba(8,127,140,.20) 100%
-    ),
-    url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-
-    display:flex;
-    align-items:center;
-}
-
-.hero-content{
-    max-width:700px;
-    color:white;
-}
-
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 15px;
-    border-radius:50px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.25);
-    margin-bottom:22px;
-    font-size:13px;
-}
-
-.hero h1{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(40px,6vw,68px);
-    line-height:1.1;
-    margin-bottom:22px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:590px;
-    opacity:.92;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-/* STATS */
-
-.stats{
-    margin-top:-55px;
-    position:relative;
-    z-index:10;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 20px 60px rgba(16,42,46,.12);
-}
-
-.stat{
-    text-align:center;
-    border-right:1px solid var(--border);
-}
-
-.stat:last-child{
-    border:none;
-}
-
-.stat h3{
-    color:var(--primary);
-    font-size:30px;
-}
-
-.stat p{
-    font-size:13px;
-}
-
-/* SERVICES */
-
-.services{
-    background:var(--light);
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.service-card{
-    background:white;
-    padding:30px;
-    border:1px solid var(--border);
-    border-radius:18px;
-    transition:.35s;
-}
-
-.service-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 50px rgba(8,127,140,.12);
-}
-
-.service-icon{
-    width:55px;
-    height:55px;
-    display:grid;
-    place-items:center;
-    border-radius:15px;
-    background:#e8f7f8;
-    color:var(--primary);
-    font-size:22px;
-    margin-bottom:20px;
-}
-
-.service-card h3{
-    color:var(--dark);
-    margin-bottom:8px;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-image{
-    position:relative;
-}
-
-.about-image img{
-    height:560px;
-    width:100%;
-    object-fit:cover;
-    border-radius:25px;
-}
-
-.experience{
-    position:absolute;
-    bottom:25px;
-    right:-25px;
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
-
-.experience strong{
-    display:block;
-    color:var(--primary);
-    font-size:35px;
-}
-
-.about-content span,
-.doctor-info span{
-    color:var(--primary);
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.about-content h2,
-.doctor-info h2{
-    font-family:"Playfair Display",serif;
-    color:var(--dark);
-    font-size:45px;
-    line-height:1.15;
-    margin:12px 0 20px;
-}
-
-.check-list{
-    list-style:none;
-    margin:25px 0;
-}
-
-.check-list li{
-    margin:12px 0;
-    color:var(--dark);
-}
-
-.check-list i{
-    color:var(--primary);
-    margin-right:10px;
-}
-
-/* WHY */
-
-.why{
-    background:var(--dark);
-    color:white;
-}
-
-.why .section-title h2{
-    color:white;
-}
-
-.why .section-title p{
-    color:#c2d4d6;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.why-card{
-    padding:30px;
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:18px;
-    background:rgba(255,255,255,.04);
-    transition:.3s;
-}
-
-.why-card:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,.08);
-}
-
-.why-card i{
-    color:var(--accent);
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.why-card h3{
-    margin-bottom:10px;
-}
-
-.why-card p{
-    color:#b9ccce;
-    font-size:14px;
-}
-
-/* DOCTOR */
-
-.doctor-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:70px;
-    align-items:center;
-}
-
-.doctor-image img{
-    height:500px;
-    width:100%;
-    object-fit:cover;
-    border-radius:22px;
-}
-
-.qualification{
-    display:inline-block;
-    padding:7px 13px;
-    background:var(--light);
-    color:var(--primary);
-    border-radius:8px;
-    margin:15px 0;
-    font-weight:600;
-}
-
-/* REVIEWS */
-
-.testimonials{
-    background:var(--light);
-}
-
-.testimonial-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.testimonial{
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    border:1px solid var(--border);
-    transition:.3s;
-}
-
-.testimonial:hover{
-    transform:translateY(-5px);
-}
-
-.stars{
-    color:#e0ac38;
-    margin-bottom:18px;
-    font-size:20px;
-}
-
-.testimonial p{
-    font-style:italic;
-    margin-bottom:20px;
-}
-
-.patient{
-    color:var(--dark);
-    font-weight:700;
-}
-
-/* ADD REVIEW */
-
-.review-actions{
-    text-align:center;
-    margin-top:40px;
-}
-
-.review-form-box{
-    max-width:750px;
-    margin:30px auto 0;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    box-shadow:0 20px 60px rgba(16,42,46,.10);
-
-    display:none;
-    animation:reviewOpen .4s ease;
-}
-
-.review-form-box.active{
-    display:block;
-}
-
-@keyframes reviewOpen{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.review-form-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.review-form-title h3{
-    color:var(--dark);
-    font-family:"Playfair Display",serif;
-    font-size:30px;
-}
-
-.review-form-title p{
-    font-size:14px;
-}
-
-/* STAR RATING */
-
-.rating-box{
-    display:flex;
-    flex-direction:row-reverse;
-    justify-content:flex-end;
-    gap:5px;
-    margin-top:8px;
-}
-
-.rating-box input{
-    display:none;
-}
-
-.rating-box label{
-    font-size:30px;
-    color:#ccd6d8;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.rating-box label:hover,
-.rating-box label:hover ~ label,
-.rating-box input:checked ~ label{
-    color:#e0ac38;
-    transform:scale(1.08);
-}
-
-/* FORM */
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-}
-
-.form-group{
-    margin-bottom:18px;
-}
-
-.form-group.full{
-    grid-column:1/-1;
-}
-
-.form-group label{
-    display:block;
-    color:var(--dark);
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:7px;
-}
-
-.form-group input,
-.form-group textarea{
-    width:100%;
-    padding:13px 15px;
-    border:1px solid var(--border);
-    border-radius:9px;
-    outline:none;
-    transition:.3s;
-}
-
-.form-group textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-    border-color:var(--primary);
-    box-shadow:0 0 0 3px rgba(8,127,140,.08);
-}
-
-/* NEW REVIEWS */
-
-.new-review-container{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-    margin-top:25px;
-}
-
-.new-review{
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    border:1px solid var(--border);
-    animation:reviewAppear .5s ease;
-}
-
-@keyframes reviewAppear{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* FAQ */
-
-.faq-container{
-    max-width:800px;
-    margin:auto;
-}
-
-.faq{
-    border-bottom:1px solid var(--border);
-}
-
-.faq-question{
-    width:100%;
-    padding:22px 0;
-    border:none;
-    background:none;
-    display:flex;
-    justify-content:space-between;
-    text-align:left;
-    color:var(--dark);
-    font-weight:700;
-    cursor:pointer;
-    font-size:16px;
-}
-
-.faq-answer{
-    max-height:0;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.faq-answer p{
-    padding-bottom:20px;
-}
-
-.faq.active .faq-answer{
-    max-height:200px;
-}
-
-/* APPOINTMENT */
-
-.appointment{
-    background:var(--light);
-}
-
-.appointment-box{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    background:white;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 20px 60px rgba(16,42,46,.08);
-}
-
-.appointment-info{
-    padding:50px;
-    background:var(--dark);
-    color:white;
-}
-
-.appointment-info h2{
-    font-family:"Playfair Display",serif;
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.contact-detail{
-    margin-top:25px;
-}
-
-.contact-detail div{
-    display:flex;
-    gap:15px;
-    margin:18px 0;
-}
-
-.contact-detail i{
-    color:var(--accent);
-    margin-top:5px;
-}
-
-.appointment-form{
-    padding:50px;
-}
-
-/* MAP */
-
-.map{
-    width:100%;
-    height:380px;
-    border:0;
-}
-
-/* FOOTER */
-
-footer{
-    background:#081d20;
-    color:#a9c0c3;
-    padding-top:70px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:40px;
-    padding-bottom:50px;
-}
-
-footer h3{
-    color:white;
-    margin-bottom:18px;
-}
-
-.footer-links{
-    list-style:none;
-}
-
-.footer-links li{
-    margin:10px 0;
-    font-size:14px;
-}
-
-.socials{
-    display:flex;
-    gap:10px;
-    margin-top:20px;
-}
-
-.socials a{
-    width:40px;
-    height:40px;
-    display:grid;
-    place-items:center;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:10px;
-    transition:.3s;
-}
-
-.socials a:hover{
-    background:var(--primary);
-    color:white;
-    transform:translateY(-3px);
-}
-
-.copyright{
-    border-top:1px solid rgba(255,255,255,.08);
-    padding:20px 0;
-    font-size:13px;
-}
-
-/* FLOATING BUTTONS */
-
-.floating-buttons{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    z-index:2000;
-}
-
-.floating-btn{
-    width:52px;
-    height:52px;
-    display:grid;
-    place-items:center;
-    border-radius:50%;
-    background:var(--primary);
-    color:white;
-    box-shadow:0 8px 25px rgba(0,0,0,.18);
-    font-size:20px;
-    transition:.3s;
-}
-
-.floating-btn:hover{
-    transform:scale(1.15);
-    background:var(--primary-dark);
-}
-
-/* RESPONSIVE */
-
-/* ================================
-   MOBILE RESPONSIVE ONLY
-   ================================ */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 18px 20px;
-        gap: 8px;
-        display: none;
-        box-shadow: 0 15px 30px rgba(0,0,0,.08);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .topbar-right {
-        display: none;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .service-grid,
-    .testimonial-grid,
-    .new-review-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid,
-    .doctor-grid,
-    .appointment-box {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* ================================
-   SMALL MOBILE
-   ================================ */
-
+    <meta charset="UTF-8">
+
+    <!-- Mobile Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#087f8c">
+    <meta name="robots" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- SEO -->
+    <title>Sri Sai Dental Clinic and Implant Center | Premium Dental Care</title>
+
+    <meta name="description"
+          content="Sri Sai Dental Clinic and Implant Center provides professional dental care including dental implants, root canal treatment, teeth cleaning, braces, gum care, and cosmetic dentistry in Tirupati.">
+
+    <meta name="keywords"
+          content="dentist Tirupati, dental clinic Tirupati, dental implants, root canal, braces, teeth cleaning, periodontist, Dr M Haritha">
+
+    <meta name="author" content="Sri Sai Dental Clinic and Implant Center">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sri Sai Dental Clinic and Implant Center | Premium Dental Care">
+    <meta property="og:description"
+          content="Transforming Smiles with Care. Professional dental care with modern technology in Tirupati.">
+    <meta property="og:type" content="website">
+
+    <!-- Performance: preload the above-the-fold hero image -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=85" fetchpriority="high">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+
+    <style>
+
+        /* ==============================
+           ACCESSIBILITY & PERFORMANCE
+        ============================== */
+
+        .skip-link {
+            position: fixed;
+            top: -60px;
+            left: 15px;
+            z-index: 9999;
+            background: var(--dark);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 0 8px 8px;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        section, footer {
+            scroll-margin-top: 90px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (min-width: 901px) {
+            .section, .stats, .appointment, .testimonials, .why {
+                content-visibility: auto;
+                contain-intrinsic-size: 600px;
+            }
+        }
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #087f8c;
+            --primary-dark: #05616b;
+            --accent: #d8b36a;
+            --dark: #102a2e;
+            --text: #52676b;
+            --light: #f5fbfb;
+            --white: #ffffff;
+            --border: #e5eeee;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--dark);
+            font-size: clamp(32px, 5vw, 48px);
+            margin: 10px 0 15px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* ==============================
+           BUTTON ANIMATIONS & STYLES
+        ============================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 23px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn:active {
+            transform: scale(0.97) translateY(0) !important;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-solid {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(8, 127, 140, 0.3);
+        }
+
+        .btn-solid:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(8, 127, 140, 0.4);
+            color: white;
+        }
+
+        /* Pulse Keyframes for CTA Buttons */
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(8, 127, 140, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(8, 127, 140, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(8, 127, 140, 0);
+            }
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Floating Buttons Animation */
+        .floating-btn {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+            font-size: 20px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15) rotate(8deg);
+            background: var(--primary-dark);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+        }
+
+        :focus-visible {
+            outline: 3px solid rgba(216,179,106,0.9);
+            outline-offset: 3px;
+        }
+
+        /* ==============================
+           TOP BAR
+        ============================== */
+
+        .topbar {
+            background: var(--dark);
+            color: white;
+            font-size: 13px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            gap: 22px;
+        }
+
+        .topbar i {
+            color: var(--accent);
+            margin-right: 6px;
+        }
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .logo-img-wrapper {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fffdf5;
+            border-radius: 12px;
+            padding: 3px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transition: transform 0.4s ease;
+            overflow: hidden;
+        }
+
+        .logo:hover .logo-img-wrapper {
+            transform: scale(1.05) rotate(4deg);
+        }
+
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 25px;
+            color: var(--dark);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 720px;
+            background:
+                linear-gradient(90deg,
+                rgba(8,127,140,0.96) 0%,
+                rgba(8,127,140,0.82) 45%,
+                rgba(8,127,140,0.20) 100%),
+                url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            margin-bottom: 22px;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.1;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 590px;
+            opacity: 0.92;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* ==============================
+           STATS
+        ============================== */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(16,42,46,0.12);
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border: none;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-size: 30px;
+        }
+
+        .stat p {
+            font-size: 13px;
+        }
+
+        /* ==============================
+           SERVICES
+        ============================== */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            transition: 0.35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(8,127,140,0.12);
+            border-color: rgba(8,127,140,0.25);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            background: #e8f7f8;
+            color: var(--primary);
+            font-size: 22px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .service-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+        }
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 560px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .experience {
+            position: absolute;
+            bottom: 25px;
+            right: -25px;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .experience strong {
+            display: block;
+            color: var(--primary);
+            font-size: 35px;
+        }
+
+        .about-content span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--dark);
+            font-size: 45px;
+            line-height: 1.15;
+            margin: 12px 0 20px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            color: var(--dark);
+        }
+
+        .check-list i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        /* ==============================
+           WHY US
+        ============================== */
+
+        .why {
+            background: var(--dark);
+            color: white;
+        }
+
+        .why .section-title h2 {
+            color: white;
+        }
+
+        .why .section-title p {
+            color: #c2d4d6;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.04);
+            transition: transform 0.3s ease;
+        }
+
+        
+
+        .why-card i {
+            color: var(--accent);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #b9ccce;
+            font-size: 14px;
+        }
+
+        /* ==============================
+           DENTIST
+        ============================== */
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .doctor-image img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        .doctor-info span {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .doctor-info h2 {
+            color: var(--dark);
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        .qualification {
+            display: inline-block;
+            padding: 7px 13px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        /* ==============================
+           TESTIMONIALS
+        ============================== */
+
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .stars {
+            color: #e0ac38;
+            margin-bottom: 18px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .patient {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        /* ==============================
+           FAQ
+        ============================== */
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 22px 0;
+            border: none;
+            background: none;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            color: var(--dark);
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq.active .faq-answer {
+            max-height: 200px;
+        }
+
+
+        /* ==============================
+           APPOINTMENT SUCCESS MESSAGE
+        ============================== */
+        .appointment-success {
+            display: none;
+            text-align: center;
+            padding: 45px 25px;
+            border: 1px solid #d8eeee;
+            border-radius: 18px;
+            background: #f7ffff;
+            animation: successIn 0.45s ease;
+        }
+
+        .appointment-success.show {
+            display: block;
+        }
+
+        .appointment-success-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 18px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #e6f8f5;
+            color: var(--primary);
+            font-size: 30px;
+        }
+
+        .appointment-success h3 {
+            color: var(--dark);
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .appointment-success p {
+            max-width: 520px;
+            margin: 0 auto 22px;
+        }
+
+        @keyframes successIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-error {
+            display: none;
+            margin-bottom: 18px;
+            padding: 12px 15px;
+            border-radius: 9px;
+            background: #fff4f4;
+            border: 1px solid #ffd4d4;
+            color: #a33a3a;
+            font-size: 14px;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        /* ==============================
+           APPOINTMENT
+        ============================== */
+
+        .appointment {
+            background: var(--light);
+        }
+
+        .appointment-box {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(16,42,46,0.08);
+        }
+
+        .appointment-info {
+            padding: 50px;
+            background: var(--dark);
+            color: white;
+        }
+
+        .appointment-info h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-detail {
+            margin-top: 25px;
+        }
+
+        .contact-detail div {
+            display: flex;
+            gap: 15px;
+            margin: 18px 0;
+        }
+
+        .contact-detail i {
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .appointment-form {
+            padding: 50px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(8,127,140,0.08);
+        }
+
+        /* ==============================
+           MAP
+        ============================== */
+
+        .map {
+            width: 100%;
+            height: 380px;
+            border: 0;
+        }
+
+        .map-placeholder {
+            min-height: 380px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #eefafa, #f8fbfb);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .map-placeholder i {
+            color: var(--primary);
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .map-placeholder h2 {
+            color: var(--dark);
+            font-family: "Playfair Display", serif;
+            margin-bottom: 6px;
+        }
+
+        .map-placeholder p { margin-bottom: 20px; }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #081d20;
+            color: #a9c0c3;
+            padding-top: 70px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #a9c0c3;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .socials a {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .socials a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 0;
+            font-size: 13px;
+        }
+
+        /* ==============================
+           FLOATING BUTTONS
+        ============================== */
+
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 2000;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .topbar-right {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .stat:nth-child(2) {
+                border: none;
+            }
+
+            .service-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .doctor-grid,
+            .appointment-box {
+                grid-template-columns: 1fr;
+            }
+
+            .experience {
+                right: 15px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .topbar-left {
+                gap: 10px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats-grid,
+            .service-grid,
+            .testimonial-grid,
+            .why-grid,
+            .footer-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border: none;
+            }
+
+            .about-image img,
+            .doctor-image img {
+                height: 400px;
+            }
+
+            .about-content h2,
+            .doctor-info h2 {
+                font-size: 36px;
+            }
+
+            .appointment-info,
+            .appointment-form {
+                padding: 30px;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+    
+/* Original card animations preserved */
+.service-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    border-color: var(--primary, #0ea5a8);
+}
+.service-icon {
+    transition: transform 0.3s ease;
+}
+.service-card:hover .service-icon {
+    transform: scale(1.08) rotate(3deg);
+}
+.why-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial {
+    transition: transform 0.3s ease;
+}
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Review button */
+.review-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #f4b400;
+    background: #f4b400;
+    color: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.review-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* WHY CHOOSE US: hover animation only, absolutely no color/background change */
+.why-card,
+.why-card:hover,
+.why-card:focus,
+.why-card:active {
+    background-color: #0f3033 !important;
+    background: #0f3033 !important;
+    color: inherit !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    box-shadow: none !important;
+    filter: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.why-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+.why-card h3,
+.why-card:hover h3,
+.why-card p,
+.why-card:hover p,
+.why-card .why-icon,
+.why-card:hover .why-icon {
+    color: inherit !important;
+    background-color: transparent !important;
+    filter: none !important;
+}
+
+
+/* Image rendering/performance */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   MOBILE-FIRST EXPERIENCE — added without changing desktop
+   ========================================================= */
 @media (max-width: 600px) {
-
+    html { scroll-padding-top: 70px; }
     body {
+        padding-bottom: 64px;
         overflow-x: hidden;
-        line-height: 1.55;
     }
 
-    .container {
-        width: calc(100% - 28px);
-    }
-
-    /* SECTIONS */
-    .section {
-        padding: 48px 0;
-    }
-
-    .section-title {
-        margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-        line-height: 1.15;
-        margin: 7px 0 10px;
-    }
-
-    .section-title p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-
-    /* TOP BAR */
+    /* Compact header */
     .topbar {
-        font-size: 11px;
+        display: none !important;
     }
 
-    .topbar-content {
-        justify-content: center;
-        padding: 6px 0;
-    }
-
-
-    /* NAVBAR */
     nav {
-        height: 64px;
+        height: 64px !important;
+        padding: 0 14px !important;
     }
 
     .logo {
-        gap: 8px;
-        font-size: 15px;
+        font-size: 14px !important;
+        gap: 8px !important;
     }
 
     .logo-img-wrapper {
-        width: 42px;
-        height: 42px;
-        border-radius: 9px;
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 10px !important;
     }
 
     .logo-text span {
-        font-size: 9px;
-    }
-
-    .menu-btn {
-        font-size: 22px;
+        font-size: 9px !important;
     }
 
     .nav-links {
-        top: 64px;
-        padding: 14px 18px;
-        gap: 5px;
+        gap: 0 !important;
     }
 
-    .nav-links a {
-        padding: 7px 4px;
-    }
-
-
-    /* HERO */
+    /* Compact hero */
     .hero {
-        min-height: 470px;
-        padding: 55px 0 65px;
+        min-height: 560px !important;
+        padding: 55px 0 70px !important;
+        align-items: center !important;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 18px !important;
     }
 
     .hero-badge {
-        padding: 6px 11px;
-        margin-bottom: 14px;
-        font-size: 11px;
+        padding: 7px 12px !important;
+        margin-bottom: 15px !important;
+        font-size: 11px !important;
     }
 
     .hero h1 {
-        font-size: 34px;
-        line-height: 1.08;
-        margin-bottom: 14px;
+        font-size: 38px !important;
+        line-height: 1.08 !important;
+        margin-bottom: 15px !important;
     }
 
     .hero p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-bottom: 22px;
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 20px !important;
     }
 
-    .hero-buttons {
-        gap: 9px;
+    .hero-buttons,
+    .hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 9px !important;
     }
 
-    .hero-buttons .btn {
-        width: auto;
-        flex: 1;
-        padding: 11px 12px;
-        font-size: 13px;
+    .hero-buttons a,
+    .hero-actions a {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 10px !important;
+        font-size: 13px !important;
     }
 
-
-    /* STATS */
-    .stats {
-        margin-top: -28px;
+    /* Sections become shorter and cleaner */
+    .section {
+        padding: 48px 0 !important;
     }
 
+    .container {
+        width: min(100% - 28px, 1180px) !important;
+    }
+
+    .section-title {
+        margin-bottom: 24px !important;
+    }
+
+    .section-title span {
+        font-size: 11px !important;
+    }
+
+    .section-title h2 {
+        font-size: 29px !important;
+        line-height: 1.15 !important;
+        margin: 8px 0 10px !important;
+    }
+
+    .section-title p {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Stats: compact 2 x 2 */
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 13px 8px;
-        border-radius: 14px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0 !important;
     }
 
     .stat {
-        padding: 7px 5px;
-        border-right: 1px solid var(--border);
-    }
-
-    .stat:nth-child(2),
-    .stat:nth-child(4) {
-        border-right: none;
-    }
-
-    .stat:nth-child(-n+2) {
-        border-bottom: 1px solid var(--border);
+        padding: 18px 8px !important;
     }
 
     .stat h3 {
-        font-size: 22px;
-        line-height: 1.2;
+        font-size: 27px !important;
     }
 
     .stat p {
-        font-size: 10px;
-        line-height: 1.3;
+        font-size: 11px !important;
     }
 
-
-    /* SERVICES */
+    /* Services: swipe horizontally instead of a very long stack */
     .service-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        display: flex !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 14px !important;
+        padding: 4px 4px 14px !important;
+        margin-right: -14px !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
     }
 
-    .service-card {
-        padding: 18px;
-        border-radius: 14px;
+    .service-grid::-webkit-scrollbar,
+    .testimonial-grid::-webkit-scrollbar {
+        display: none !important;
     }
 
-    .service-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 11px;
-        font-size: 18px;
-        margin-bottom: 12px;
+    .service-grid .service-card {
+        flex: 0 0 82% !important;
+        min-width: 82% !important;
+        scroll-snap-align: start !important;
+        padding: 22px !important;
     }
 
     .service-card h3 {
-        font-size: 17px;
-        margin-bottom: 5px;
+        font-size: 18px !important;
     }
 
     .service-card p {
-        font-size: 13px;
-        line-height: 1.45;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
     }
 
-
-    /* ABOUT */
-    .about-grid {
-        gap: 30px;
+    /* Keep card animation, but no hover-style effects on touch devices */
+    .service-card:hover {
+        transform: none !important;
+        box-shadow: inherit !important;
     }
 
-    .about-image img {
-        height: 280px;
-        border-radius: 18px;
-    }
-
-    .experience {
-        bottom: 14px;
-        right: 10px;
-        padding: 12px 15px;
-        border-radius: 12px;
-        font-size: 12px;
-    }
-
-    .experience strong {
-        font-size: 24px;
+    /* About / doctor images */
+    .about-image img,
+    .doctor-image img {
+        height: 280px !important;
+        border-radius: 18px !important;
     }
 
     .about-content h2,
     .doctor-info h2 {
-        font-size: 30px;
-        margin: 8px 0 14px;
+        font-size: 30px !important;
+        line-height: 1.2 !important;
     }
 
     .about-content p,
     .doctor-info p {
-        font-size: 14px;
-        line-height: 1.55;
+        font-size: 14px !important;
+        line-height: 1.7 !important;
     }
 
     .check-list {
-        margin: 16px 0;
+        margin: 18px 0 !important;
     }
 
     .check-list li {
-        margin: 8px 0;
-        font-size: 13px;
+        font-size: 13px !important;
+        margin: 9px 0 !important;
     }
 
-
-    /* WHY CHOOSE US */
+    /* Why Choose Us: compact 2-column cards, NO color change */
     .why-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
     }
 
-    .why-card {
-        padding: 17px 14px;
-        border-radius: 14px;
+    .why-card,
+    .why-card:hover,
+    .why-card:focus,
+    .why-card:active {
+        padding: 18px 13px !important;
+        min-height: 150px !important;
+        background: rgba(255,255,255,0.04) !important;
+        color: inherit !important;
+        border-color: rgba(255,255,255,0.1) !important;
+        box-shadow: none !important;
+        filter: none !important;
+    }
+
+    .why-card:hover {
+        transform: none !important;
     }
 
     .why-card i {
-        font-size: 21px;
-        margin-bottom: 10px;
+        font-size: 23px !important;
+        margin-bottom: 12px !important;
     }
 
     .why-card h3 {
-        font-size: 15px;
-        line-height: 1.25;
-        margin-bottom: 6px;
+        font-size: 15px !important;
+        line-height: 1.3 !important;
     }
 
     .why-card p {
-        font-size: 11px;
-        line-height: 1.4;
+        font-size: 11px !important;
+        line-height: 1.5 !important;
     }
 
+    /* Reviews: swipe cards */
+    .testimonial-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 14px !important;
+        padding: 4px 4px 14px !important;
+        margin-right: -14px !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+    }
 
-    /* DOCTOR */
+    .testimonial-grid .testimonial {
+        flex: 0 0 86% !important;
+        min-width: 86% !important;
+        scroll-snap-align: start !important;
+        padding: 22px !important;
+    }
+
+    .testimonial:hover {
+        transform: none !important;
+    }
+
+    .review-button-wrap {
+        margin: 16px 0 20px !important;
+    }
+
+    .review-button {
+        width: 100% !important;
+        padding: 12px 18px !important;
+    }
+
+    /* FAQ */
+    .faq-question {
+        padding: 16px !important;
+        font-size: 14px !important;
+    }
+
+    .faq-answer {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Appointment */
+    .appointment-info,
+    .appointment-form {
+        padding: 22px !important;
+    }
+
+    .appointment-info h2 {
+        font-size: 28px !important;
+    }
+
+    .appointment-info p,
+    .appointment-form label {
+        font-size: 13px !important;
+    }
+
+    .form-grid {
+        gap: 12px !important;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        min-height: 46px !important;
+        font-size: 14px !important;
+    }
+
+    /* Map */
+    .map-wrap iframe,
+    .map-container iframe {
+        min-height: 280px !important;
+        height: 280px !important;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+
+    /* Fixed mobile quick navigation */
+    .mobile-bottom-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 62px;
+        background: rgba(255,255,255,0.97);
+        border-top: 1px solid rgba(0,0,0,0.10);
+        box-shadow: 0 -6px 24px rgba(0,0,0,0.10);
+        backdrop-filter: blur(12px);
+    }
+
+    .mobile-bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        color: #123b3e;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 700;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-bottom-nav i {
+        font-size: 18px;
+        color: #087f8c;
+    }
+
+    .mobile-bottom-nav a.book {
+        color: white;
+        background: #087f8c;
+    }
+
+    .mobile-bottom-nav a.book i {
+        color: white;
+    }
+}
+
+/* Hidden on desktop/tablet */
+.mobile-bottom-nav {
+    display: none;
+}
+
+</style>
+<!-- Add your real website URL here when the site is deployed:
+<link rel="canonical" href="https://YOUR-DOMAIN.example/">
+-->
+
+<style id="premium-mobile-responsive">
+/* =========================================================
+   PREMIUM MOBILE RESPONSIVE OVERRIDE
+   Desktop/tablet design above 767px remains unchanged.
+   ========================================================= */
+
+@media (max-width: 767px) {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 72px;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding-bottom: calc(68px + env(safe-area-inset-bottom));
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .container {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+    }
+
+    .section {
+        padding: 52px 0 !important;
+    }
+
+    /* ---------- MOBILE HEADER ---------- */
+    .topbar {
+        display: none !important;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 5000;
+    }
+
+    nav {
+        height: 64px !important;
+        min-height: 64px;
+        padding: 0 !important;
+    }
+
+    .logo {
+        min-width: 0;
+        max-width: calc(100% - 55px);
+        gap: 8px !important;
+        font-size: 14px !important;
+        line-height: 1.05 !important;
+    }
+
+    .logo-img-wrapper {
+        flex: 0 0 42px;
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 10px !important;
+    }
+
+    .logo-text {
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .logo-text span {
+        font-size: 8.5px !important;
+        margin-top: 3px;
+    }
+
+    .menu-btn {
+        display: grid !important;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        border-radius: 12px;
+        background: #eef8f8;
+        font-size: 20px !important;
+    }
+
+    .nav-links {
+        position: fixed !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-height: calc(100dvh - 64px);
+        overflow-y: auto;
+        padding: 10px 14px 20px !important;
+        gap: 3px !important;
+        background: rgba(255,255,255,.98) !important;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-top: 1px solid #edf3f3;
+        box-shadow: 0 18px 40px rgba(16,42,46,.14);
+        display: none;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        min-height: 48px;
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        padding: 11px 14px;
+        border-radius: 10px;
+        font-size: 14px !important;
+    }
+
+    .nav-links li a:not(.nav-cta):active {
+        background: #eef8f8;
+    }
+
+    .nav-links .nav-cta {
+        justify-content: center;
+        margin-top: 5px;
+        min-height: 48px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+        min-height: 590px !important;
+        padding: 58px 0 72px !important;
+        background-position: 62% center !important;
+    }
+
+    .hero .container {
+        width: 100% !important;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    .hero-badge {
+        max-width: 100%;
+        width: fit-content;
+        padding: 7px 11px !important;
+        margin-bottom: 16px !important;
+        font-size: 10.5px !important;
+        line-height: 1.3;
+    }
+
+    .hero h1 {
+        max-width: 360px;
+        font-size: clamp(34px, 10vw, 44px) !important;
+        line-height: 1.08 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero p {
+        max-width: 390px;
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 22px !important;
+    }
+
+    .hero-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px !important;
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        min-height: 46px;
+        padding: 11px 8px !important;
+        font-size: 12.5px;
+        white-space: nowrap;
+    }
+
+    /* ---------- STATS ---------- */
+    .stats {
+        margin-top: -30px !important;
+        z-index: 20;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0 !important;
+        padding: 8px !important;
+        border-radius: 17px !important;
+    }
+
+    .stat {
+        min-width: 0;
+        padding: 15px 7px !important;
+        border-right: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border) !important;
+    }
+
+    .stat:nth-child(2n) {
+        border-right: 0 !important;
+    }
+
+    .stat:nth-child(n+3) {
+        border-bottom: 0 !important;
+    }
+
+    .stat h3 {
+        font-size: 24px !important;
+        line-height: 1.15;
+    }
+
+    .stat p {
+        font-size: 10.5px !important;
+        line-height: 1.35;
+        margin-top: 4px;
+    }
+
+    /* ---------- SECTION HEADINGS ---------- */
+    .section-title {
+        margin-bottom: 28px !important;
+        padding: 0 4px;
+    }
+
+    .section-title span {
+        font-size: 10.5px !important;
+        letter-spacing: 1.5px;
+    }
+
+    .section-title h2 {
+        font-size: clamp(28px, 8vw, 34px) !important;
+        line-height: 1.12 !important;
+        margin: 8px 0 10px !important;
+    }
+
+    .section-title p {
+        font-size: 13px !important;
+        line-height: 1.6;
+    }
+
+    /* ---------- SERVICES ---------- */
+    .service-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .service-card {
+        padding: 20px !important;
+        border-radius: 16px !important;
+        min-width: 0 !important;
+    }
+
+    .service-icon {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 13px !important;
+        border-radius: 13px !important;
+        font-size: 19px !important;
+    }
+
+    .service-card h3 {
+        font-size: 17px !important;
+        line-height: 1.3;
+        margin-bottom: 6px;
+    }
+
+    .service-card p {
+        font-size: 12.5px !important;
+        line-height: 1.6 !important;
+    }
+
+    .service-card:hover {
+        transform: none !important;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid,
+    .doctor-grid,
+    .appointment-box {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .about-image,
+    .doctor-image {
+        width: 100%;
+    }
+
+    .about-image img,
+    .doctor-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 360px;
+        min-height: 240px;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 18px !important;
+    }
+
+    .experience {
+        right: 12px !important;
+        bottom: 12px !important;
+        padding: 13px 16px !important;
+        border-radius: 14px !important;
+    }
+
+    .experience strong {
+        font-size: 27px !important;
+        line-height: 1;
+    }
+
+    .experience {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .about-content h2,
+    .doctor-info h2 {
+        font-size: 31px !important;
+        line-height: 1.15 !important;
+        margin: 9px 0 14px !important;
+    }
+
+    .about-content p,
+    .doctor-info p {
+        font-size: 13.5px !important;
+        line-height: 1.7 !important;
+    }
+
+    .check-list {
+        margin: 17px 0 !important;
+    }
+
+    .check-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 12.5px !important;
+        line-height: 1.5;
+        margin: 9px 0 !important;
+    }
+
+    .check-list i {
+        flex: 0 0 auto;
+        margin-right: 0 !important;
+        margin-top: 3px;
+    }
+
+    /* ---------- WHY US ---------- */
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .why-card {
+        min-width: 0;
+        padding: 18px 13px !important;
+        border-radius: 15px !important;
+    }
+
+    .why-card i {
+        font-size: 21px !important;
+        margin-bottom: 11px !important;
+    }
+
+    .why-card h3 {
+        font-size: 14px !important;
+        line-height: 1.3;
+        margin-bottom: 7px;
+    }
+
+    .why-card p {
+        font-size: 10.8px !important;
+        line-height: 1.5;
+    }
+
+    .why-card:hover {
+        transform: none !important;
+    }
+
+    /* ---------- DOCTOR ---------- */
     .doctor-grid {
-        gap: 25px;
+        gap: 25px !important;
     }
 
     .doctor-image img {
-        height: 300px;
-        border-radius: 18px;
+        max-height: 330px;
     }
 
     .qualification {
-        padding: 6px 10px;
-        margin: 10px 0;
-        font-size: 12px;
+        font-size: 11.5px;
+        padding: 7px 10px;
+        margin: 10px 0 14px;
     }
 
-
-    /* REVIEWS */
-    .testimonial-grid,
-    .new-review-container {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .doctor-info br {
+        display: none;
     }
 
-    .testimonial,
-    .new-review {
-        padding: 18px;
-        border-radius: 14px;
+    .doctor-info p + p {
+        margin-top: 12px;
     }
 
-    .stars {
-        font-size: 17px;
-        margin-bottom: 10px;
+    /* ---------- REVIEWS ---------- */
+    .testimonial-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 12px !important;
+        padding: 3px 3px 12px !important;
+        margin-right: -14px !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .testimonial p,
-    .new-review p {
+    .testimonial-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial-grid .testimonial {
+        flex: 0 0 calc(100% - 26px) !important;
+        min-width: calc(100% - 26px) !important;
+        scroll-snap-align: start;
+        padding: 20px !important;
+        border-radius: 16px !important;
+    }
+
+    .testimonial:hover {
+        transform: none !important;
+    }
+
+    .testimonial p {
         font-size: 13px;
-        line-height: 1.5;
-        margin-bottom: 12px;
+        line-height: 1.65;
     }
 
-    .review-actions {
-        margin-top: 25px;
+    .review-button {
+        width: 100%;
+        min-height: 46px;
     }
 
-    .review-form-box {
-        padding: 18px;
-        margin-top: 20px;
-        border-radius: 14px;
+    /* ---------- FAQ ---------- */
+    .faq-container {
+        width: 100%;
     }
 
-    .review-form-title {
-        margin-bottom: 18px;
+    .faq-question {
+        padding: 17px 2px !important;
+        gap: 15px;
+        font-size: 13.5px !important;
+        line-height: 1.45;
     }
 
-    .review-form-title h3 {
-        font-size: 25px;
+    .faq-question i {
+        flex: 0 0 auto;
     }
 
-    .review-form-title p {
-        font-size: 12px;
+    .faq-answer p {
+        font-size: 12.5px;
+        line-height: 1.65;
+        padding: 0 2px 17px;
     }
 
+    /* ---------- APPOINTMENT ---------- */
+    .appointment-box {
+        border-radius: 18px !important;
+    }
 
-    /* FORMS */
+    .appointment-info,
+    .appointment-form {
+        padding: 24px 18px !important;
+    }
+
+    .appointment-info h2 {
+        font-size: 30px !important;
+        line-height: 1.15;
+    }
+
+    .contact-detail div {
+        gap: 11px;
+        margin: 14px 0;
+        font-size: 12.5px;
+    }
+
     .form-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .form-group.full {
+        grid-column: auto !important;
     }
 
     .form-group {
         margin-bottom: 13px;
     }
 
+    .form-group label {
+        font-size: 12px !important;
+        margin-bottom: 6px;
+    }
+
     .form-group input,
-    .form-group textarea,
-    .form-group select {
-        padding: 11px 12px;
-        font-size: 14px;
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        min-height: 46px !important;
+        padding: 11px 12px !important;
+        font-size: 14px !important;
+        border-radius: 10px !important;
     }
 
     .form-group textarea {
-        min-height: 90px;
+        min-height: 105px !important;
     }
 
-    .rating-box label {
-        font-size: 27px;
+    .appointment-form .btn {
+        width: 100%;
+        min-height: 48px;
     }
 
-
-    /* FAQ */
-    .faq-question {
-        padding: 16px 0;
-        font-size: 14px;
-        gap: 12px;
+    .appointment-success {
+        padding: 32px 17px !important;
     }
 
-    .faq-answer p {
-        padding-bottom: 15px;
-        font-size: 13px;
-        line-height: 1.5;
+    .appointment-success h3 {
+        font-size: 25px !important;
     }
 
-
-    /* APPOINTMENT */
-    .appointment-box {
-        border-radius: 18px;
+    /* ---------- MAP ---------- */
+    .map,
+    .map-placeholder {
+        height: 290px !important;
+        min-height: 290px !important;
     }
 
-    .appointment-info,
-    .appointment-form {
-        padding: 22px 18px;
+    .map-placeholder {
+        padding: 25px 16px !important;
     }
 
-    .appointment-info h2 {
-        font-size: 30px;
-        margin-bottom: 10px;
+    .map-placeholder i {
+        font-size: 34px !important;
     }
 
-    .appointment-info p {
-        font-size: 13px;
+    .map-placeholder h2 {
+        font-size: 25px;
     }
 
-    .contact-detail {
-        margin-top: 18px;
-    }
-
-    .contact-detail div {
-        gap: 10px;
-        margin: 12px 0;
-        font-size: 13px;
-    }
-
-
-    /* MAP */
-    .map {
-        height: 260px;
-    }
-
-
-    /* FOOTER */
+    /* ---------- FOOTER ---------- */
     footer {
-        padding-top: 42px;
+        padding-top: 48px !important;
     }
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px 16px;
-        padding-bottom: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        padding-bottom: 30px !important;
     }
 
     footer h3 {
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 12px;
     }
 
+    footer p,
     .footer-links li {
-        margin: 7px 0;
-        font-size: 11px;
-        line-height: 1.4;
-    }
-
-    footer p {
-        font-size: 11px;
-        line-height: 1.45;
+        font-size: 12.5px !important;
+        line-height: 1.6;
     }
 
     .socials {
-        gap: 7px;
-        margin-top: 13px;
-    }
-
-    .socials a {
-        width: 34px;
-        height: 34px;
-        border-radius: 8px;
+        margin-top: 14px;
     }
 
     .copyright {
-        padding: 14px 0;
-        font-size: 10px;
-        line-height: 1.4;
+        padding: 16px 0 !important;
+        font-size: 11px !important;
+        line-height: 1.5;
     }
 
-
-    /* FLOATING BUTTONS */
+    /* ---------- FLOATING BUTTONS ---------- */
     .floating-buttons {
-        right: 12px;
-        bottom: 12px;
-        gap: 7px;
+        right: 12px !important;
+        bottom: calc(78px + env(safe-area-inset-bottom)) !important;
+        gap: 8px !important;
     }
 
     .floating-btn {
-        width: 44px;
-        height: 44px;
+        width: 46px !important;
+        height: 46px !important;
+        font-size: 17px !important;
+    }
+
+    /* ---------- MOBILE QUICK NAV ---------- */
+    .mobile-bottom-nav {
+        display: grid !important;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 6000;
+        height: calc(62px + env(safe-area-inset-bottom));
+        padding-bottom: env(safe-area-inset-bottom);
+        grid-template-columns: repeat(4, 1fr);
+        background: rgba(255,255,255,.97);
+        border-top: 1px solid rgba(0,0,0,.08);
+        box-shadow: 0 -8px 25px rgba(0,0,0,.10);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .mobile-bottom-nav a {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #123b3e;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-bottom-nav i {
         font-size: 17px;
+        color: var(--primary);
+    }
+
+    .mobile-bottom-nav a.book {
+        color: white;
+        background: var(--primary);
+    }
+
+    .mobile-bottom-nav a.book i {
+        color: white;
+    }
+
+    /* ---------- TOUCH / ACCESSIBILITY ---------- */
+    a, button, input, select, textarea {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn,
+    .review-button,
+    .nav-links a {
+        touch-action: manipulation;
+    }
+
+    .reveal-on-scroll {
+        transform: translateY(10px);
     }
 }
 
+/* Very small phones */
+@media (max-width: 380px) {
+    .container {
+        width: calc(100% - 22px) !important;
+    }
+
+    .hero-content {
+        padding: 0 15px !important;
+    }
+
+    .hero {
+        min-height: 570px !important;
+    }
+
+    .hero h1 {
+        font-size: 33px !important;
+    }
+
+    .hero-buttons {
+        grid-template-columns: 1fr !important;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .why-card {
+        min-height: auto !important;
+    }
+
+    .logo-text {
+        font-size: 13px;
+    }
+
+    .logo-text span {
+        font-size: 8px !important;
+    }
+}
 </style>
+
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ==============================
+     TOP BAR
+================================ -->
 
 <div class="topbar">
-<div class="container topbar-content">
+    <div class="container topbar-content">
 
-<div class="topbar-left">
-<span>
-<i class="fa-solid fa-clock"></i>
-Mon - Sat: 9:00 AM - 8:00 PM
-</span>
+        <div class="topbar-left">
+            <span>
+                <i class="fa-solid fa-clock"></i>
+                Mon - Sat: 9:00 AM - 8:00 PM
+            </span>
+        </div>
+
+        <div class="topbar-right">
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                9493647007 / 8309375639
+            </span>
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Tirupati, A.P.
+            </span>
+        </div>
+
+    </div>
 </div>
 
-<div class="topbar-right">
-<span>
-<i class="fa-solid fa-phone"></i>
-9493647007 / 8309375639
-</span>
 
-<span>
-<i class="fa-solid fa-location-dot"></i>
-Tirupati, A.P.
-</span>
-</div>
-
-</div>
-</div>
-
-
-<!-- NAVBAR -->
+<!-- ==============================
+     NAVBAR
+================================ -->
 
 <header>
 
-<div class="container">
+    <div class="container">
 
-<nav>
+        <nav>
 
-<a href="#home" class="logo">
+            <a href="#home" class="logo">
 
-<div class="logo-img-wrapper">
-<img src="logo.png" alt="Sri Sai Dental Logo">
-</div>
+                <div class="logo-img-wrapper">
+                    <img src="logo.png" alt="Sri Sai Dental Clinic Logo" width="52" height="52" decoding="async">
+                </div>
 
-<div class="logo-text">
-SRI SAI
-<span>Dental Clinic & Implant Center</span>
-</div>
+                <div class="logo-text">
+                    SRI SAI
+                    <span>Dental Clinic & Implant Center</span>
+                </div>
 
-</a>
+            </a>
 
-<ul class="nav-links" id="navLinks">
+            <ul class="nav-links" id="navLinks">
 
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#doctor">Dentist</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctor">Dentist</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
 
-<li>
-<a href="#appointment" class="nav-cta">
-Book Appointment
-</a>
-</li>
+                <li>
+                    <a href="#appointment" class="nav-cta">
+                        Book Appointment
+                    </a>
+                </li>
 
-</ul>
+            </ul>
 
-<button class="menu-btn" id="menuBtn">
-<i class="fa-solid fa-bars"></i>
-</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-</nav>
+        </nav>
 
-</div>
+    </div>
 
 </header>
 
 
-<!-- HERO -->
+<main id="main-content">
+
+<!-- ==============================
+     HERO
+================================ -->
 
 <section class="hero" id="home">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<div class="hero-badge">
-<i class="fa-solid fa-star"></i>
-Transforming Smiles with Care
-</div>
+            <div class="hero-badge">
+                <i class="fa-solid fa-star"></i>
+                Transforming Smiles with Care
+            </div>
 
-<h1>
-SRI SAI Dental Clinic & Implant Center
-</h1>
+            <h1>
+                SRI SAI Dental Clinic & Implant Center
+            </h1>
 
-<p>
-Experience modern, comfortable, and personalized dental care guided by Dr. M. Haritha, MDS.
-</p>
+            <p>
+                Experience modern, comfortable, and personalized dental care guided by Dr. M. Haritha, MDS.
+            </p>
 
-<div class="hero-buttons">
+            <div class="hero-buttons">
 
-<a href="#appointment" class="btn btn-primary">
-<i class="fa-solid fa-calendar-check"></i>
-Book Appointment
-</a>
+                <a href="#appointment" class="btn btn-primary">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book Appointment
+                </a>
 
-<a href="tel:+919493647007" class="btn btn-outline">
-<i class="fa-solid fa-phone"></i>
-Call Now
-</a>
+                <a href="tel:+919493647007" class="btn btn-outline">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Now
+                </a>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- STATS -->
+<!-- ==============================
+     STATS
+================================ -->
 
 <section class="stats">
 
-<div class="container">
+    <div class="container">
 
-<div class="stats-grid">
+        <div class="stats-grid">
 
-<div class="stat">
-<h3>10+</h3>
-<p>Years Experience</p>
-</div>
+            <div class="stat">
+                <h3>10+</h3>
+                <p>Years Experience</p>
+            </div>
 
-<div class="stat">
-<h3>5K+</h3>
-<p>Happy Patients</p>
-</div>
+            <div class="stat">
+                <h3>5K+</h3>
+                <p>Happy Patients</p>
+            </div>
 
-<div class="stat">
-<h3>4.9★</h3>
-<p>Patient Rating</p>
-</div>
+            <div class="stat">
+                <h3>4.9★</h3>
+                <p>Patient Rating</p>
+            </div>
 
-<div class="stat">
-<h3>15+</h3>
-<p>Dental Services</p>
-</div>
+            <div class="stat">
+                <h3>15+</h3>
+                <p>Dental Services</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- ==============================
+     SERVICES
+================================ -->
 
 <section class="section services" id="services">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
 
-<span>Our Services</span>
+            <span>Our Services</span>
 
-<h2>Complete Dental Care</h2>
+            <h2>Complete Dental Care</h2>
 
-<p>
-From preventive care to advanced implant treatments,
-we provide comprehensive dental solutions.
-</p>
+            <p>
+                From preventive care to advanced implant treatments,
+                we provide comprehensive dental solutions.
+            </p>
 
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-tooth"></i>
-</div>
-
-<h3>General Dentistry & Cleaning</h3>
-
-<p>
-Professional cleaning and oral health care to maintain healthy teeth and gums.
-</p>
-</div>
+        </div>
 
 
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-teeth"></i>
-</div>
+        <div class="service-grid">
 
-<h3>Dental Implants</h3>
+            <div class="service-card">
 
-<p>
-Advanced and permanent natural-looking tooth replacement solutions.
-</p>
-</div>
+                <div class="service-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
 
+                <h3>General Dentistry & Cleaning</h3>
 
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-teeth-open"></i>
-</div>
+                <p>
+                    Professional cleaning and oral health care to maintain healthy teeth and gums.
+                </p>
 
-<h3>Braces & Orthodontics</h3>
-
-<p>
-Orthodontic treatments for healthier, beautifully aligned teeth.
-</p>
-</div>
+            </div>
 
 
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-syringe"></i>
-</div>
+            <div class="service-card">
 
-<h3>Root Canal Treatment</h3>
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth"></i>
+                </div>
 
-<p>
-Modern root canal therapy focused on preserving your natural teeth comfortably.
-</p>
-</div>
+                <h3>Dental Implants</h3>
 
+                <p>
+                    Advanced and permanent natural-looking tooth replacement solutions.
+                </p>
 
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-hand-holding-medical"></i>
-</div>
-
-<h3>Gum Care & Treatment</h3>
-
-<p>
-Specialized periodontics and gum disease treatments by expert specialists.
-</p>
-</div>
+            </div>
 
 
-<div class="service-card">
-<div class="service-icon">
-<i class="fa-solid fa-face-smile"></i>
-</div>
+            <div class="service-card">
 
-<h3>Teeth Whitening & Extractions</h3>
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth-open"></i>
+                </div>
 
-<p>
-Cosmetic whitening treatments and safe dental extractions.
-</p>
-</div>
+                <h3>Braces & Orthodontics</h3>
 
-</div>
+                <p>
+                    Orthodontic treatments for healthier, beautifully aligned teeth.
+                </p>
 
-</div>
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+
+                <h3>Root Canal Treatment</h3>
+
+                <p>
+                    Modern root canal therapy focused on preserving your natural teeth comfortably.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                </div>
+
+                <h3>Gum Care & Treatment</h3>
+
+                <p>
+                    Specialized periodontics and gum disease treatments by expert specialists.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+
+                <h3>Teeth Whitening & Extractions</h3>
+
+                <p>
+                    Cosmetic whitening treatments and safe, pain-free dental extractions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ==============================
+     ABOUT
+================================ -->
 
 <section class="section" id="about">
 
-<div class="container">
+    <div class="container">
 
-<div class="about-grid">
+        <div class="about-grid">
 
-<div class="about-image">
+            <div class="about-image">
 
-<img src="image.jpg.jpeg"
-alt="Modern dental clinic chair and equipment">
+                <img
+                    src="image.jpg.jpeg"
+                    alt="Modern dental clinic chair and equipment"
+                    width="900"
+                    height="560"
+                    loading="lazy"
+                    decoding="async">
 
-<div class="experience">
+                <div class="experience">
 
-<strong>10+</strong>
+                    <strong>10+</strong>
 
-Years of
-Experience
+                    Years of
+                    Experience
+                </div>
 
-</div>
-
-</div>
+            </div>
 
 
-<div class="about-content">
+            <div class="about-content">
 
-<span>About Our Clinic</span>
+                <span>About Our Clinic</span>
 
-<h2>
-Modern Dentistry.
-Personal Care.
-</h2>
+                <h2>
+                    Modern Dentistry.
+                    Personal Care.
+                </h2>
 
-<p>
-At Sri Sai Dental Clinic and Implant Center, our goal is to provide high-quality, comprehensive dental care in a welcoming and comfortable setting.
-</p>
+                <p>
+                    At Sri Sai Dental Clinic and Implant Center, our goal is to provide high-quality, comprehensive dental care in a welcoming and comfortable setting.
+                </p>
 
-<ul class="check-list">
+                <ul class="check-list">
 
-<li>
-<i class="fa-solid fa-circle-check"></i>
-Expert Periodontist & Implantologist
-</li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Expert Periodontist & Implantologist
+                    </li>
 
-<li>
-<i class="fa-solid fa-circle-check"></i>
-State-of-the-art dental technology
-</li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        State-of-the-art dental technology
+                    </li>
 
-<li>
-<i class="fa-solid fa-circle-check"></i>
-Patient-centered, compassionate treatment
-</li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Patient-centered, compassionate treatment
+                    </li>
 
-<li>
-<i class="fa-solid fa-circle-check"></i>
-Hygienic and safe environment
-</li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Hygienic and safe environment
+                    </li>
 
-</ul>
+                </ul>
 
-<a href="#appointment" class="btn btn-solid">
-Learn More
-</a>
+                <a href="#appointment" class="btn btn-solid">
 
-</div>
+                    Learn More
 
-</div>
+                </a>
 
-</div>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- WHY CHOOSE US -->
+<!-- ==============================
+     WHY CHOOSE US
+================================ -->
 
 <section class="section why">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
 
-<span>Why Choose Us</span>
+            <span>Why Choose Us</span>
 
-<h2>Dental Care You Can Trust</h2>
+            <h2>Dental Care You Can Trust</h2>
 
-<p>
-We combine experience, technology and personalized care to create a better dental experience.
-</p>
+            <p>
+                We combine experience, technology and personalized care to create a better dental experience.
+            </p>
 
-</div>
+        </div>
 
-<div class="why-grid">
 
-<div class="why-card">
-<i class="fa-solid fa-user-doctor"></i>
-<h3>Experienced Dentist</h3>
-<p>
-Professional care from an experienced Periodontist & Implantologist.
-</p>
-</div>
+        <div class="why-grid">
 
-<div class="why-card">
-<i class="fa-solid fa-microscope"></i>
-<h3>Modern Technology</h3>
-<p>
-Advanced equipment supporting precise diagnostic and treatment plans.
-</p>
-</div>
+            <div class="why-card">
 
-<div class="why-card">
-<i class="fa-solid fa-shield-heart"></i>
-<h3>Patient Safety</h3>
-<p>
-Uncompromised focus on hygiene, sterilization, and patient comfort.
-</p>
-</div>
+                <i class="fa-solid fa-user-doctor"></i>
 
-<div class="why-card">
-<i class="fa-solid fa-heart"></i>
-<h3>Personalized Care</h3>
-<p>
-Tailored treatment routines crafted around each patient's specific needs.
-</p>
-</div>
+                <h3>Experienced Dentist</h3>
 
-</div>
+                <p>
+                    Professional care from an experienced Periodontist & Implantologist.
+                </p>
 
-</div>
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-microscope"></i>
+
+                <h3>Modern Technology</h3>
+
+                <p>
+                    Advanced equipment supporting precise diagnostic and treatment plans.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <h3>Patient Safety</h3>
+
+                <p>
+                    Uncompromised focus on hygiene, sterilization, and patient comfort.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>Personalized Care</h3>
+
+                <p>
+                    Tailored treatment routines crafted around each patient's specific needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- DOCTOR -->
+<!-- ==============================
+     DOCTOR
+================================ -->
 
 <section class="section" id="doctor">
 
-<div class="container">
+    <div class="container">
 
-<div class="doctor-grid">
+        <div class="doctor-grid">
 
-<div class="doctor-image">
+            <div class="doctor-image">
 
-<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=85"
-alt="Dr. M. Haritha">
+                <img
+                    src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=75"
+                    alt="Dr. M. Haritha"
+                    width="900"
+                    height="500"
+                    loading="lazy"
+                    decoding="async">
 
-</div>
+            </div>
 
-<div class="doctor-info">
 
-<span>Meet Your Dentist</span>
+            <div class="doctor-info">
 
-<h2>Dr. M. HARITHA</h2>
+                <span>Meet Your Dentist</span>
 
-<div class="qualification">
-MDS (Periodontist & Implantologist)
-</div>
+                <h2>
+                    Dr. M. HARITHA
+                </h2>
 
-<p>
-Dr. M. Haritha is dedicated to providing specialized, highly effective, and patient-focused dental treatments.
-</p>
+                <div class="qualification">
 
-<br>
+                    MDS (Periodontist & Implantologist)
 
-<p>
-With extensive expertise in periodontics and dental implantology, her focus is on gentle, long-lasting, and aesthetic dental care.
-</p>
+                </div>
 
-<br>
+                <p>
+                    Dr. M. Haritha is dedicated to providing specialized, highly effective, and patient-focused dental treatments.
+                </p>
 
-<a href="#appointment" class="btn btn-solid">
-Meet the Dentist
-</a>
+                <br>
 
-</div>
+                <p>
+                    With extensive expertise in periodontics and dental implantology, her focus is on gentle, long-lasting, and aesthetic dental care.
+                </p>
 
-</div>
+                <br>
 
-</div>
+                <a href="#appointment" class="btn btn-solid">
+
+                    Meet the Dentist
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- REVIEWS -->
+<!-- ==============================
+     TESTIMONIALS
+================================ -->
 
 <section class="section testimonials" id="reviews">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
 
-<span>Patient Reviews</span>
+            <span>Patient Reviews</span>
 
-<h2>What Our Patients Say</h2>
+            <h2>What Our Patients Say</h2>
 
-<p>
-Real experiences from our valued patients.
-</p>
+            <p>
+                Real experiences from our valued patients.
+            </p>
 
+        </div>
+
+
+        
+<div class="review-button-wrap" style="text-align:center;margin:24px 0;">
+    <a class="review-button"
+       href="https://www.google.com/search?q=Sri+Sai+Dental+Clinic+and+Implant+Center+Tirupati"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Add a review for Sri Sai Dental Clinic and Implant Center">
+        ★ Add a Review
+    </a>
 </div>
+<div class="testimonial-grid">
 
+            <div class="testimonial">
 
-</div>
+                <div class="stars">
+                    ★★★★★
+                </div>
 
-</div>
+                <p>
+                    "The clinic is extremely clean and Dr. Haritha explained the entire procedure clearly. Very gentle care!"
+                </p>
 
-</div>
+                <div class="patient">
+                    — Patient Review
+                </div>
 
+            </div>
 
-<!-- ADD REVIEW BUTTON -->
 
-<div class="review-actions">
+            <div class="testimonial">
 
-<button class="btn btn-solid" id="addReviewBtn">
+                <div class="stars">
+                    ★★★★★
+                </div>
 
-<i class="fa-solid fa-pen-to-square"></i>
+                <p>
+                    "Excellent experience for dental implants. Highly professional and painless treatment."
+                </p>
 
-Add Your Review
+                <div class="patient">
+                    — Patient Review
+                </div>
 
-</button>
+            </div>
 
-</div>
 
+            <div class="testimonial">
 
-<!-- REVIEW FORM -->
+                <div class="stars">
+                    ★★★★★
+                </div>
 
-<div class="review-form-box" id="reviewFormBox">
+                <p>
+                    "Best dental clinic in Tirupati! Highly recommended for root canal and gum treatments."
+                </p>
 
-<div class="review-form-title">
+                <div class="patient">
+                    — Patient Review
+                </div>
 
-<span>SHARE YOUR EXPERIENCE</span>
+            </div>
 
-<h3>Add Your Review</h3>
+        </div>
 
-<p>
-Tell us about your experience at Sri Sai Dental Clinic.
-</p>
-
-</div>
-
-
-<form id="reviewForm">
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label for="reviewName">
-Your Name
-</label>
-
-<input
-type="text"
-id="reviewName"
-placeholder="Enter your name"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Your Rating
-</label>
-
-<div class="rating-box">
-
-<input type="radio"
-id="rating5"
-name="rating"
-value="5"
-required>
-
-<label for="rating5">★</label>
-
-
-<input type="radio"
-id="rating4"
-name="rating"
-value="4">
-
-<label for="rating4">★</label>
-
-
-<input type="radio"
-id="rating3"
-name="rating"
-value="3">
-
-<label for="rating3">★</label>
-
-
-<input type="radio"
-id="rating2"
-name="rating"
-value="2">
-
-<label for="rating2">★</label>
-
-
-<input type="radio"
-id="rating1"
-name="rating"
-value="1">
-
-<label for="rating1">★</label>
-
-</div>
-
-</div>
-
-
-<div class="form-group full">
-
-<label for="reviewText">
-Your Review
-</label>
-
-<textarea
-id="reviewText"
-placeholder="Write your experience..."
-required></textarea>
-
-</div>
-
-
-</div>
-
-
-<button
-type="submit"
-class="btn btn-solid"
-style="width:100%;">
-
-<i class="fa-solid fa-paper-plane"></i>
-
-Submit Review
-
-</button>
-
-</form>
-
-</div>
-
-
-<!-- NEW REVIEWS WILL APPEAR HERE -->
-
-<div class="new-review-container"
-id="newReviewContainer">
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- FAQ -->
+<!-- ==============================
+     FAQ
+================================ -->
 
 <section class="section" id="faq">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
 
-<span>FAQ</span>
+            <span>FAQ</span>
 
-<h2>Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions</h2>
 
-</div>
-
-
-<div class="faq-container">
+        </div>
 
 
-<div class="faq">
+        <div class="faq-container">
 
-<button class="faq-question">
+            <div class="faq">
 
-How can I book an appointment?
+                <button class="faq-question">
 
-<i class="fa-solid fa-plus"></i>
+                    How can I book an appointment?
 
-</button>
+                    <i class="fa-solid fa-plus"></i>
 
-<div class="faq-answer">
+                </button>
 
-<p>
-You can book through our online booking page or call us directly at 9493647007 / 8309375639.
-</p>
+                <div class="faq-answer">
 
-</div>
+                    <p>
+                        You can book through our online booking page or call us directly at 9493647007 / 8309375639.
+                    </p>
 
-</div>
+                </div>
 
-
-<div class="faq">
-
-<button class="faq-question">
-
-What dental services do you provide?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-We offer General Dentistry, Dental Implants, Braces & Orthodontics, Root Canal Treatment, Gum Treatments, Teeth Whitening, and Extractions.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="faq">
+            <div class="faq">
 
-<button class="faq-question">
+                <button class="faq-question">
 
-Do I need an appointment?
+                    What dental services do you provide?
 
-<i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus"></i>
 
-</button>
+                </button>
 
-<div class="faq-answer">
+                <div class="faq-answer">
 
-<p>
-Appointments are recommended to ensure dedicated time with the doctor for your visit.
-</p>
+                    <p>
+                        We offer General Dentistry, Dental Implants, Braces & Orthodontics, Root Canal Treatment, Gum Treatments, Teeth Whitening, and Extractions.
+                    </p>
 
-</div>
+                </div>
 
-</div>
-
-
-<div class="faq">
-
-<button class="faq-question">
-
-Where is the clinic located?
-
-<i class="fa-solid fa-plus"></i>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-We are located at Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.).
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="faq">
 
-</div>
+                <button class="faq-question">
+
+                    Do I need an appointment?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Appointments are recommended to ensure dedicated time with the doctor for your visit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <button class="faq-question">
+
+                    Where is the clinic located?
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We are located at Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.).
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- APPOINTMENT -->
+<!-- ==============================
+     APPOINTMENT
+================================ -->
 
 <section class="section appointment" id="appointment">
 
-<div class="container">
+    <div class="container">
 
-<div class="appointment-box">
+        <div class="appointment-box">
 
-<div class="appointment-info">
+            <div class="appointment-info">
 
-<h2>
-Book Your Visit
-</h2>
+                <h2>
+                    Book Your Visit
+                </h2>
 
-<p>
-Take the first step toward better dental health. Request an appointment today.
-</p>
+                <p>
+                    Take the first step toward better dental health. Request an appointment today.
+                </p>
 
-<div class="contact-detail">
 
-<div>
-<i class="fa-solid fa-phone"></i>
+                <div class="contact-detail">
 
-<span>
-9493647007<br>
-8309375639
-</span>
+                    <div>
 
-</div>
+                        <i class="fa-solid fa-phone"></i>
 
+                        <span>
+                            9493647007<br>
+                            8309375639
+                        </span>
 
-<div>
-<i class="fa-solid fa-envelope"></i>
+                    </div>
 
-<span>
-srisaidental@gmail.com
-</span>
 
-</div>
+                    <div>
 
+                        <i class="fa-solid fa-envelope"></i>
 
-<div>
-<i class="fa-solid fa-location-dot"></i>
+                        <span>
+                            srisaidental@gmail.com
+                        </span>
 
-<span>
-Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
-</span>
+                    </div>
 
-</div>
 
+                    <div>
 
-<div>
-<i class="fa-solid fa-clock"></i>
+                        <i class="fa-solid fa-location-dot"></i>
 
-<span>
-Mon - Sat<br>
-9:00 AM - 8:00 PM
-</span>
+                        <span>
+                            Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
+                        </span>
 
-</div>
+                    </div>
 
-</div>
 
-</div>
+                    <div>
 
+                        <i class="fa-solid fa-clock"></i>
 
-<div class="appointment-form">
+                        <span>
+                            Mon - Sat<br>
+                            9:00 AM - 8:00 PM
+                        </span>
 
-<form id="appointmentForm">
+                    </div>
 
-<div class="form-grid">
+                </div>
 
+            </div>
 
-<div class="form-group">
 
-<label>
-Full Name
-</label>
+            <div class="appointment-form">
 
-<input
-type="text"
-id="name"
-placeholder="Your name"
-required>
+                <form id="appointmentForm" novalidate>
 
-</div>
+                    <div class="form-error" id="appointmentError" role="alert"></div>
 
+                    <div class="form-grid">
 
-<div class="form-group">
+                        <div class="form-group">
 
-<label>
-Phone Number
-</label>
+                            <label for="name">
+                                Full Name
+                            </label>
 
-<input
-type="tel"
-id="phone"
-placeholder="Your phone"
-required>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Your name"
+                                autocomplete="name"
+                                minlength="2"
+                                required>
 
-</div>
+                        </div>
 
 
-<div class="form-group">
+                        <div class="form-group">
 
-<label>
-Preferred Date
-</label>
+                            <label for="phone">
+                                Phone Number
+                            </label>
 
-<input
-type="date"
-id="date"
-required>
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Your phone"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                pattern="[0-9+()\s-]{10,}"
+                                required>
 
-</div>
+                        </div>
 
 
-<div class="form-group">
+                        <div class="form-group">
 
-<label>
-Preferred Time
-</label>
+                            <label for="date">
+                                Preferred Date
+                            </label>
 
-<input
-type="time"
-id="time"
-required>
+                            <input
+                                type="date"
+                                id="date"
+                                required>
 
-</div>
+                        </div>
 
 
-<div class="form-group full">
+                        <div class="form-group">
 
-<label>
-Service
-</label>
+                            <label for="time">
+                                Preferred Time
+                            </label>
 
-<select id="service">
+                            <input
+                                type="time"
+                                id="time"
+                                required>
 
-<option>
-Select a service
-</option>
+                        </div>
 
-<option>
-General Dentistry & Cleaning
-</option>
 
-<option>
-Dental Implants
-</option>
+                        <div class="form-group full">
 
-<option>
-Braces & Orthodontics
-</option>
+                            <label for="service">
+                                Service
+                            </label>
 
-<option>
-Root Canal Treatment
-</option>
+                            <select id="service" required>
 
-<option>
-Gum Care & Treatment
-</option>
+                                <option value="" selected disabled>
+                                    Select a service
+                                </option>
 
-<option>
-Teeth Whitening / Extraction
-</option>
+                                <option>
+                                    General Dentistry & Cleaning
+                                </option>
 
-</select>
+                                <option>
+                                    Dental Implants
+                                </option>
 
-</div>
+                                <option>
+                                    Braces & Orthodontics
+                                </option>
 
+                                <option>
+                                    Root Canal Treatment
+                                </option>
 
-<div class="form-group full">
+                                <option>
+                                    Gum Care & Treatment
+                                </option>
 
-<label>
-Message
-</label>
+                                <option>
+                                    Teeth Whitening / Extraction
+                                </option>
 
-<textarea
-id="message"
-placeholder="Tell us how we can help..."></textarea>
+                            </select>
 
-</div>
+                        </div>
 
-</div>
 
+                        <div class="form-group full">
 
-<button
-type="submit"
-class="btn btn-solid"
-style="width:100%;">
+                            <label for="message">
+                                Message
+                            </label>
 
-<i class="fa-solid fa-calendar-check"></i>
+                            <textarea
+                                id="message"
+                                placeholder="Tell us how we can help..."></textarea>
 
-Request Appointment
+                        </div>
 
-</button>
+                    </div>
 
-</form>
 
-</div>
+                    <button type="submit" class="btn btn-solid" id="appointmentSubmit" style="width:100%;">
 
-</div>
+                        <i class="fa-solid fa-calendar-check"></i>
 
-</div>
+                        Request Appointment
+
+                    </button>
+
+                </form>
+<div class="appointment-success" id="appointmentSuccess" role="status">
+                    <div class="appointment-success-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3>Appointment Request Sent!</h3>
+                    <p>
+                        Thank you for contacting Sri Sai Dental Clinic.
+                        Your WhatsApp message has been prepared successfully.
+                        Our clinic can confirm your appointment shortly.
+                    </p>
+                    <button type="button" class="btn btn-solid" id="bookAnotherBtn">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Book Another Appointment
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- MAP -->
+<!-- ==============================
+     GOOGLE MAP (TIRUPATI)
+================================ -->
 
-<section>
+<section aria-label="Clinic location">
 
-<iframe
-class="map"
-src="https://www.google.com/maps?q=Chandragiri+Road,+Tirupati,+Andhra+Pradesh+517502&output=embed"
-loading="lazy"
-title="Clinic location - Tirupati">
-</iframe>
+    <div class="map-placeholder" id="mapPlaceholder">
+        <div>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <h2>Find Sri Sai Dental Clinic</h2>
+            <p>Chandragiri Road, Tirupati - 517 502</p>
+            <button type="button" class="btn btn-solid" id="loadMapBtn">
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                Load Google Maps
+            </button>
+        </div>
+    </div>
+    <noscript>
+        <p style="text-align:center;padding:20px;"><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&query=Chandragiri+Road,+Tirupati,+Andhra+Pradesh+517502" target="_blank" rel="noopener noreferrer">Open Clinic Location</a></p>
+    </noscript>
 
 </section>
 
 
-<!-- FOOTER -->
+</main>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
 
 <footer>
 
-<div class="container">
+    <div class="container">
 
-<div class="footer-grid">
+        <div class="footer-grid">
 
+            <div>
 
-<div>
+                <div class="logo" style="color:white;">
 
-<div class="logo" style="color:white;">
+                    <div class="logo-img-wrapper">
+                        <img src="logo.png" alt="Sri Sai Dental Clinic Logo">
+                    </div>
 
-<div class="logo-img-wrapper">
-<img src="logo.png" alt="Sri Sai Dental Clinic Logo">
-</div>
+                    <div class="logo-text">
+                        SRI SAI
+                        <span style="color:#d8b36a;">Dental Clinic & Implant Center</span>
+                    </div>
 
-<div class="logo-text">
-SRI SAI
-<span style="color:#d8b36a;">
-Dental Clinic & Implant Center
-</span>
-</div>
+                </div>
 
-</div>
+                <br>
 
-<br>
-
-<p>
-Transforming Smiles with Care. Professional dental care led by Dr. M. Haritha, MDS.
-</p>
-
-<div class="socials">
-
-<a href="#" aria-label="Instagram">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="#" aria-label="Facebook">
-<i class="fa-brands fa-facebook"></i>
-</a>
-
-<a href="#" aria-label="YouTube">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
+                <p>
+                    Transforming Smiles with Care. Professional dental care led by Dr. M. Haritha, MDS.
+                </p>
 
 
-<div>
+                <div class="socials">
 
-<h3>Quick Links</h3>
+                    <!-- Instagram App Deep Link -->
+                    <a href="instagram://user?username=srisaidentalclinic" onclick="openAppDeepLink(event, 'instagram://user?username=srisaidentalclinic', 'https://instagram.com');" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-<ul class="footer-links">
+                    <!-- Facebook App Deep Link -->
+                    <a href="fb://page" onclick="openAppDeepLink(event, 'fb://page', 'https://facebook.com');" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
 
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#services">Our Services</a></li>
-<li><a href="#doctor">Meet Dentist</a></li>
-<li><a href="#reviews">Patient Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#appointment">Book Appointment</a></li>
+                    <!-- YouTube App Deep Link -->
+                    <a href="vnd.youtube://" onclick="openAppDeepLink(event, 'vnd.youtube://', 'https://youtube.com');" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
 
-</ul>
+                </div>
 
-</div>
-
-
-<div>
-
-<h3>Services</h3>
-
-<ul class="footer-links">
-
-<li><a href="#services">General Dentistry</a></li>
-<li><a href="#services">Dental Implants</a></li>
-<li><a href="#services">Braces & Orthodontics</a></li>
-<li><a href="#services">Root Canal Treatment</a></li>
-<li><a href="#services">Gum Care & Whitening</a></li>
-
-</ul>
-
-</div>
+            </div>
 
 
-<div>
+            <div>
 
-<h3>Contact</h3>
+                <h3>Quick Links</h3>
 
-<ul class="footer-links">
+                <ul class="footer-links">
 
-<li>
-Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
-</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#doctor">Meet Dentist</a></li>
+                    <li><a href="#reviews">Patient Reviews</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#appointment">Book Appointment</a></li>
 
-<li>
-Ph: 9493647007 / 8309375639
-</li>
+                </ul>
 
-<li>
-Mon - Sat: 9 AM - 8 PM
-</li>
-
-</ul>
-
-</div>
+            </div>
 
 
-</div>
+            <div>
+
+                <h3>Services</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="#services">General Dentistry</a></li>
+                    <li><a href="#services">Dental Implants</a></li>
+                    <li><a href="#services">Braces & Orthodontics</a></li>
+                    <li><a href="#services">Root Canal Treatment</a></li>
+                    <li><a href="#services">Gum Care & Whitening</a></li>
+
+                </ul>
+
+            </div>
 
 
-<div class="copyright">
+            <div>
 
-© 2026 SRI SAI Dental Clinic and Implant Center. All Rights Reserved.
+                <h3>Contact</h3>
 
-</div>
+                <ul class="footer-links">
 
-</div>
+                    <li>
+                        Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati - 517 502 (A.P.)
+                    </li>
+
+                    <li>
+                        Ph: 9493647007 / 8309375639
+                    </li>
+
+                    <li>
+                        Mon - Sat: 9 AM - 8 PM
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 SRI SAI Dental Clinic and Implant Center. All Rights Reserved.
+
+        </div>
+
+    </div>
 
 </footer>
 
 
-<!-- FLOATING BUTTONS -->
+<!-- ==============================
+     FLOATING BUTTONS
+================================ -->
 
 <div class="floating-buttons">
 
-<a
-href="https://wa.me/919493647007"
-target="_blank"
-class="floating-btn"
-aria-label="WhatsApp">
+    <a
+        href="https://wa.me/919493647007"
+        target="_blank"
+        class="floating-btn"
+        aria-label="WhatsApp"
+        rel="noopener noreferrer">
 
-<i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-whatsapp"></i>
 
-</a>
+    </a>
 
 
-<a
-href="tel:+919493647007"
-class="floating-btn"
-aria-label="Call">
+    <a
+        href="tel:+919493647007"
+        class="floating-btn"
+        aria-label="Call">
 
-<i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-phone"></i>
 
-</a>
+    </a>
 
 </div>
 
 
-<!-- JAVASCRIPT -->
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
 
 <script>
 
-/* MOBILE MENU */
+    /* ==============================
+       APP DEEP LINK ROUTER
+    ============================== */
+    function openAppDeepLink(event, appUri, webFallback) {
+        event.preventDefault();
+        const start = Date.now();
+        window.location.href = appUri;
 
-const menuBtn =
-document.getElementById("menuBtn");
+        setTimeout(function() {
+            if (Date.now() - start < 2000) {
+                window.location.href = webFallback;
+            }
+        }, 1200);
+    }
 
-const navLinks =
-document.getElementById("navLinks");
+    /* ==============================
+       MOBILE MENU
+    ============================== */
 
-menuBtn.addEventListener("click",()=>{
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-navLinks.classList.toggle("active");
+    menuBtn.addEventListener("click", () => {
 
-});
+        navLinks.classList.toggle("active");
 
+    });
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(link=>{
 
-link.addEventListener("click",()=>{
+    /* Close menu after clicking */
 
-navLinks.classList.remove("active");
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-});
+        link.addEventListener("click", () => {
 
-});
+            navLinks.classList.remove("active");
 
+        });
 
-/* FAQ */
+    });
 
-document
-.querySelectorAll(".faq-question")
-.forEach(button=>{
 
-button.addEventListener("click",()=>{
+    /* ==============================
+       FAQ
+    ============================== */
 
-const faq =
-button.parentElement;
+    document.querySelectorAll(".faq-question").forEach(button => {
 
-faq.classList.toggle("active");
+        button.addEventListener("click", () => {
 
-const icon =
-button.querySelector("i");
+            const faq = button.parentElement;
 
-if(faq.classList.contains("active")){
+            faq.classList.toggle("active");
 
-icon.classList.remove("fa-plus");
+            const icon = button.querySelector("i");
 
-icon.classList.add("fa-minus");
+            if (faq.classList.contains("active")) {
 
-}else{
+                icon.classList.remove("fa-plus");
+                icon.classList.add("fa-minus");
 
-icon.classList.remove("fa-minus");
+            } else {
 
-icon.classList.add("fa-plus");
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
 
-}
+            }
 
-});
+        });
 
-});
+    });
 
 
-/* ==========================
-   ADD REVIEW BUTTON
-========================== */
+    /* ==============================
+       CLICK-TO-LOAD GOOGLE MAP
+       Keeps the heavy third-party map off the initial page load.
+    ============================== */
 
-const addReviewBtn =
-document.getElementById("addReviewBtn");
+    const loadMapBtn = document.getElementById("loadMapBtn");
+    const mapPlaceholder = document.getElementById("mapPlaceholder");
 
-const reviewFormBox =
-document.getElementById("reviewFormBox");
+    if (loadMapBtn && mapPlaceholder) {
+        loadMapBtn.addEventListener("click", function() {
+            const iframe = document.createElement("iframe");
+            iframe.className = "map";
+            iframe.src = "https://www.google.com/maps?q=Chandragiri+Road,+Tirupati,+Andhra+Pradesh+517502&output=embed";
+            iframe.title = "Sri Sai Dental Clinic location in Tirupati";
+            iframe.loading = "lazy";
+            iframe.referrerPolicy = "strict-origin-when-cross-origin";
+            iframe.setAttribute("allowfullscreen", "");
+            mapPlaceholder.replaceWith(iframe);
+        });
+    }
 
+    /* ==============================
+       APPOINTMENT FORM
+    ============================== */
 
-addReviewBtn.addEventListener("click",()=>{
-
-reviewFormBox.classList.toggle("active");
-
-if(reviewFormBox.classList.contains("active")){
-
-addReviewBtn.innerHTML =
-'<i class="fa-solid fa-xmark"></i> Close Review Form';
-
-reviewFormBox.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-}else{
-
-addReviewBtn.innerHTML =
-'<i class="fa-solid fa-pen-to-square"></i> Add Your Review';
-
-}
-
-});
-
-
-/* ==========================
-   SUBMIT REVIEW
-========================== */
-
-const reviewForm =
-document.getElementById("reviewForm");
-
-const newReviewContainer =
-document.getElementById("newReviewContainer");
-
-
-reviewForm.addEventListener("submit",(event)=>{
-
-event.preventDefault();
-
-
-const name =
-document.getElementById("reviewName")
-.value
-.trim();
-
-
-const reviewText =
-document.getElementById("reviewText")
-.value
-.trim();
-
-
-const selectedRating =
-document.querySelector(
-'input[name="rating"]:checked'
-);
-
-
-if(!selectedRating){
-
-alert("Please select a rating.");
-
-return;
-
-}
-
-
-const rating =
-Number(selectedRating.value);
-
-
-/* Create stars */
-
-let stars="";
-
-for(let i=1;i<=5;i++){
-
-if(i<=rating){
-
-stars+="★";
-
-}else{
-
-stars+="☆";
-
-}
-
-}
-
-
-/* Create review card */
-
-const reviewCard =
-document.createElement("div");
-
-reviewCard.className =
-"new-review";
-
-
-/* Safely create elements */
-
-const starDiv =
-document.createElement("div");
-
-starDiv.className="stars";
-
-starDiv.textContent=stars;
-
-
-const textPara =
-document.createElement("p");
-
-textPara.textContent =
-'"'+reviewText+'"';
-
-
-const patientDiv =
-document.createElement("div");
-
-patientDiv.className="patient";
-
-patientDiv.textContent =
-"— "+name;
-
-
-reviewCard.appendChild(starDiv);
-
-reviewCard.appendChild(textPara);
-
-reviewCard.appendChild(patientDiv);
-
-
-newReviewContainer.appendChild(reviewCard);
-
-
-/* Reset form */
-
-reviewForm.reset();
-
-
-/* Close form */
-
-reviewFormBox.classList.remove("active");
-
-
-addReviewBtn.innerHTML =
-'<i class="fa-solid fa-pen-to-square"></i> Add Your Review';
-
-
-/* Success message */
-
-alert(
-"Thank you, "+name+"! Your review has been added."
-);
-
-
-/* Scroll to review */
-
-reviewCard.scrollIntoView({
-
-behavior:"smooth",
-
-block:"center"
-
-});
-
-});
-
-
-/* ==========================
-   APPOINTMENT
-========================== */
-
-document
-.getElementById("appointmentForm")
-.addEventListener("submit",function(event){
-
-event.preventDefault();
-
-
-const name =
-document.getElementById("name").value;
-
-const phone =
-document.getElementById("phone").value;
-
-const date =
-document.getElementById("date").value;
-
-const time =
-document.getElementById("time").value;
-
-const service =
-document.getElementById("service").value;
-
-const message =
-document.getElementById("message").value;
-
-
-const clinicNumber =
-"919493647007";
-
-
-const whatsappMessage =
-`Hello, I would like to request a dental appointment at Sri Sai Dental Clinic.
+    const appointmentForm = document.getElementById("appointmentForm");
+    const appointmentSuccess = document.getElementById("appointmentSuccess");
+    const appointmentError = document.getElementById("appointmentError");
+    const appointmentSubmit = document.getElementById("appointmentSubmit");
+    const bookAnotherBtn = document.getElementById("bookAnotherBtn");
+
+    appointmentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        appointmentError.classList.remove("show");
+        appointmentError.textContent = "";
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+
+        const digitsOnly = phone.replace(/\D/g, "");
+
+        if (name.length < 2) {
+            appointmentError.textContent = "Please enter your full name.";
+            appointmentError.classList.add("show");
+            return;
+        }
+
+        if (digitsOnly.length < 10) {
+            appointmentError.textContent = "Please enter a valid phone number.";
+            appointmentError.classList.add("show");
+            return;
+        }
+
+        if (!date || !time) {
+            appointmentError.textContent = "Please select your preferred date and time.";
+            appointmentError.classList.add("show");
+            return;
+        }
+
+        if (!service) {
+            appointmentError.textContent = "Please select a dental service.";
+            appointmentError.classList.add("show");
+            return;
+        }
+
+        const clinicNumber = "919493647007";
+
+        const formattedDate = new Date(date + "T00:00:00").toLocaleDateString("en-IN", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        });
+
+        const formattedTime = new Date("1970-01-01T" + time).toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+        const whatsappMessage =
+            `Hello, I would like to request a dental appointment at Sri Sai Dental Clinic.
 
 Name: ${name}
 Phone: ${phone}
-Date: ${date}
-Time: ${time}
+Preferred Date: ${formattedDate}
+Preferred Time: ${formattedTime}
 Service: ${service}
-Message: ${message}`;
+Message: ${message || "No additional message."}`;
+
+        const whatsappURL =
+            `https://wa.me/${clinicNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        appointmentSubmit.disabled = true;
+        appointmentSubmit.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> Opening WhatsApp...';
+
+        const whatsappWindow = window.open(whatsappURL, "_blank");
+
+        // Show the success state after the WhatsApp request is opened.
+        setTimeout(function() {
+            appointmentForm.style.display = "none";
+            appointmentSuccess.classList.add("show");
+            appointmentSubmit.disabled = false;
+            appointmentSubmit.innerHTML =
+                '<i class="fa-solid fa-calendar-check"></i> Request Appointment';
+        }, 450);
+    });
+
+    bookAnotherBtn.addEventListener("click", function() {
+        appointmentSuccess.classList.remove("show");
+        appointmentForm.reset();
+        appointmentForm.style.display = "block";
+        appointmentError.classList.remove("show");
+        appointmentError.textContent = "";
+    });
 
 
-const whatsappURL =
-`https://wa.me/${clinicNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    /* ==============================
+       LIGHTWEIGHT SCROLL REVEAL
+    ============================== */
 
+    const revealItems = document.querySelectorAll(".service-card, .why-card, .testimonial, .about-content, .doctor-info");
 
-window.open(
-whatsappURL,
-"_blank"
-);
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
 
-});
+        revealItems.forEach(item => {
+            item.classList.add("reveal-on-scroll");
+            revealObserver.observe(item);
+        });
+    }
 
+    /* ==============================
+       SET MINIMUM DATE
+    ============================== */
 
-/* MINIMUM DATE */
-
-const dateInput =
-document.getElementById("date");
-
-const today =
-new Date()
-.toISOString()
-.split("T")[0];
-
-dateInput.min=today;
+    const dateInput = document.getElementById("date");
+    const now = new Date();
+    const localYear = now.getFullYear();
+    const localMonth = String(now.getMonth() + 1).padStart(2, "0");
+    const localDay = String(now.getDate()).padStart(2, "0");
+    const today = `${localYear}-${localMonth}-${localDay}`;
+    dateInput.min = today;
 
 </script>
+
+
+<!-- ==============================
+     STRUCTURED DATA / LOCAL SEO
+================================ -->
+
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Sri Sai Dental Clinic and Implant Center",
+    "description": "Transforming Smiles with Care. Professional dental clinic offering dental implants, gum treatments, and general dentistry in Tirupati.",
+    "telephone": "+919493647007",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road",
+        "addressLocality": "Tirupati",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "517502",
+        "addressCountry": "IN"
+    },
+    "openingHours": [
+        "Mo-Sa 09:00-20:00"
+    ]
+}
+
+</script>
+
+
+<script>
+/* Graceful image fallback: keep layout stable if an external image fails. */
+(function () {
+  document.querySelectorAll('img').forEach(function (img) {
+    img.addEventListener('error', function imageFallback() {
+      img.removeEventListener('error', imageFallback);
+      img.style.visibility = 'hidden';
+    });
+  });
+})();
+</script>
+
+
+<!-- Mobile quick navigation -->
+<nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
+    <a href="#home" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+    <a href="#services" aria-label="Services">
+        <i class="fa-solid fa-tooth"></i>
+        <span>Services</span>
+    </a>
+    <a href="#appointment" class="book" aria-label="Book appointment">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book</span>
+    </a>
+    <a href="#reviews" aria-label="Reviews">
+        <i class="fa-solid fa-star"></i>
+        <span>Reviews</span>
+    </a>
+</nav>
 
 </body>
 </html>
