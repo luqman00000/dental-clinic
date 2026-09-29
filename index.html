@@ -1090,41 +1090,117 @@
            RESPONSIVE
         ============================== */
 
+        /* =========================================================
+           RESPONSIVE SYSTEM
+           Desktop remains the source of truth.
+           Mobile/tablet keep the same UI, cards, typography hierarchy,
+           content and interactions while adapting the layout cleanly.
+           ========================================================= */
+
         @media (max-width: 900px) {
 
-            .nav-links {
-                position: absolute;
-                top: 78px;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 25px;
-                display: none;
-                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            .container {
+                width: min(94%, 1150px);
             }
 
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
+            /* Header */
             .topbar-right {
                 display: none;
             }
 
+            nav {
+                height: 72px;
+            }
+
+            .menu-btn {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                max-height: calc(100dvh - 72px);
+                overflow-y: auto;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                padding: 12px 18px 22px;
+                background: rgba(255,255,255,.98);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-top: 1px solid var(--border);
+                box-shadow: 0 18px 40px rgba(16,42,46,.12);
+            }
+
+            .nav-links.active {
+                display: flex;
+                animation: mobileMenuIn .28s ease both;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: flex;
+                align-items: center;
+                min-height: 46px;
+                width: 100%;
+                padding: 10px 14px;
+                border-radius: 10px;
+            }
+
+            .nav-links a:hover {
+                background: #eef9f9;
+            }
+
+            .nav-links .nav-cta {
+                justify-content: center;
+                margin-top: 5px;
+            }
+
+            @keyframes mobileMenuIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-8px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Hero */
+            .hero {
+                min-height: 650px;
+                padding: 70px 0;
+                background-position: center;
+            }
+
+            .hero-content {
+                max-width: 680px;
+            }
+
+            /* Stats */
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 0;
             }
 
             .stat:nth-child(2) {
-                border: none;
+                border-right: none;
             }
 
+            .stat:nth-child(n+3) {
+                margin-top: 24px;
+            }
+
+            /* Main grids */
             .service-grid,
             .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1140,1241 +1216,631 @@
                 grid-template-columns: 1fr;
             }
 
+            .about-image img {
+                height: 500px;
+            }
+
+            .doctor-image img {
+                height: 460px;
+            }
+
             .experience {
-                right: 15px;
+                right: 18px;
             }
 
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .appointment-info,
+            .appointment-form {
+                padding: 40px;
+            }
         }
 
         @media (max-width: 600px) {
 
-            .hero {
-                min-height: 620px;
+            html {
+                scroll-padding-top: 68px;
+            }
+
+            body {
+                overflow-x: hidden;
+                padding-bottom: 64px;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            main {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            section,
+            footer {
+                scroll-margin-top: 68px;
+            }
+
+            .container {
+                width: calc(100% - 28px);
             }
 
             .section {
-                padding: 70px 0;
+                padding: 62px 0;
             }
 
-            .topbar-left {
-                gap: 10px;
+            /* =========================
+               HEADER — same visual UI
+               ========================= */
+
+            .topbar {
+                display: none;
             }
+
+            nav {
+                height: 64px;
+            }
+
+            .logo {
+                min-width: 0;
+                max-width: calc(100% - 52px);
+                gap: 8px;
+                font-size: 14px;
+                line-height: 1.1;
+            }
+
+            .logo-img-wrapper {
+                flex: 0 0 42px;
+                width: 42px;
+                height: 42px;
+                border-radius: 10px;
+            }
+
+            .logo-text {
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-text span {
+                font-size: 8.5px;
+            }
+
+            .menu-btn {
+                width: 44px;
+                height: 44px;
+                flex: 0 0 44px;
+                border-radius: 10px;
+                font-size: 22px;
+            }
+
+            .nav-links {
+                top: 64px;
+                max-height: calc(100dvh - 64px);
+                padding: 10px 14px 18px;
+            }
+
+            .nav-links a {
+                min-height: 46px;
+                font-size: 14px;
+            }
+
+            /* =========================
+               HERO — same desktop design
+               ========================= */
 
             .hero {
-                min-height: 650px;
+                min-height: 620px;
+                padding: 58px 0 70px;
+                background-position: 60% center;
+            }
+
+            .hero-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 4px;
+            }
+
+            .hero-badge {
+                padding: 7px 12px;
+                margin-bottom: 17px;
+                font-size: 11px;
             }
 
             .hero h1 {
-                font-size: 44px;
+                font-size: clamp(34px, 10vw, 43px);
+                line-height: 1.08;
+                margin-bottom: 17px;
             }
 
             .hero p {
-                font-size: 16px;
+                max-width: 100%;
+                font-size: 15px;
+                line-height: 1.65;
+                margin-bottom: 24px;
             }
 
-            .stats-grid,
-            .service-grid,
-            .testimonial-grid,
-            .why-grid,
-            .footer-grid,
-            .form-grid {
-                grid-template-columns: 1fr;
+            .hero-buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                min-height: 46px;
+                padding: 11px 8px;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            /* =========================
+               STATS — preserve desktop card
+               ========================= */
+
+            .stats {
+                margin-top: -32px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 20px 12px;
+                border-radius: 18px;
+                gap: 0;
             }
 
             .stat {
-                border: none;
+                padding: 13px 7px;
+                border-right: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
             }
 
-            .about-image img,
-            .doctor-image img {
-                height: 400px;
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .stat:nth-child(n+3) {
+                margin-top: 0;
+                border-bottom: none;
+            }
+
+            .stat:nth-child(3) {
+                border-right: 1px solid var(--border);
+            }
+
+            .stat h3 {
+                font-size: 24px;
+            }
+
+            .stat p {
+                font-size: 10.5px;
+                line-height: 1.4;
+            }
+
+            /* =========================
+               SECTION TITLES
+               ========================= */
+
+            .section-title {
+                margin-bottom: 32px;
+            }
+
+            .section-title span {
+                font-size: 10.5px;
+                letter-spacing: 1.6px;
+            }
+
+            .section-title h2 {
+                font-size: clamp(28px, 8vw, 36px);
+                line-height: 1.14;
+                margin: 8px 0 11px;
+            }
+
+            .section-title p {
+                font-size: 13.5px;
+                line-height: 1.65;
+            }
+
+            /* =========================
+               SERVICES — SAME CARDS
+               ========================= */
+
+            .service-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .service-card {
+                padding: 22px;
+                border-radius: 16px;
+            }
+
+            .service-card:hover {
+                transform: translateY(-4px);
+            }
+
+            .service-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 13px;
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .service-card h3 {
+                font-size: 17px;
+                margin-bottom: 7px;
+            }
+
+            .service-card p {
+                font-size: 13px;
+                line-height: 1.65;
+            }
+
+            /* =========================
+               ABOUT — all desktop content
+               ========================= */
+
+            .about-grid {
+                gap: 34px;
+            }
+
+            .about-image img {
+                height: auto;
+                min-height: 300px;
+                max-height: 430px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .experience {
+                right: 12px;
+                bottom: 14px;
+                padding: 17px;
+                border-radius: 14px;
+            }
+
+            .experience strong {
+                font-size: 29px;
             }
 
             .about-content h2,
             .doctor-info h2 {
-                font-size: 36px;
+                font-size: 32px;
+                line-height: 1.18;
+            }
+
+            .about-content p,
+            .doctor-info p {
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+            .check-list {
+                margin: 20px 0;
+            }
+
+            .check-list li {
+                font-size: 13px;
+                margin: 10px 0;
+            }
+
+            /* =========================
+               WHY US — SAME CARDS
+               ========================= */
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .why-card {
+                padding: 22px;
+                min-height: auto;
+            }
+
+            .why-card:hover {
+                transform: translateY(-4px) !important;
+            }
+
+            .why-card i {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            .why-card h3 {
+                font-size: 16px;
+                line-height: 1.35;
+            }
+
+            .why-card p {
+                font-size: 12.5px;
+                line-height: 1.6;
+            }
+
+            /* =========================
+               DOCTOR — SAME UI
+               ========================= */
+
+            .doctor-grid {
+                gap: 32px;
+            }
+
+            .doctor-image img {
+                height: auto;
+                min-height: 300px;
+                max-height: 430px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .qualification {
+                margin: 12px 0;
+                font-size: 13px;
+            }
+
+            /* =========================
+               REVIEWS — SAME CARDS
+               ========================= */
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .testimonial {
+                padding: 22px;
+                border-radius: 16px;
+            }
+
+            .testimonial:hover {
+                transform: translateY(-4px);
+            }
+
+            .testimonial p {
+                font-size: 13.5px;
+                line-height: 1.7;
+            }
+
+            .review-button {
+                width: 100%;
+                min-height: 46px;
+                padding: 12px 18px;
+            }
+
+            /* =========================
+               FAQ — full readable content
+               ========================= */
+
+            .faq-question {
+                padding: 18px 0;
+                font-size: 14px;
+                gap: 15px;
+            }
+
+            .faq-answer {
+                font-size: 13px;
+                line-height: 1.7;
+            }
+
+            /* =========================
+               APPOINTMENT — APP-LIKE FORM
+               ========================= */
+
+            .appointment-box {
+                border-radius: 20px;
             }
 
             .appointment-info,
             .appointment-form {
-                padding: 30px;
+                padding: 26px 20px;
+            }
+
+            .appointment-info h2 {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+
+            .appointment-info p,
+            .appointment-form label {
+                font-size: 13px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
             }
 
             .form-group.full {
                 grid-column: auto;
             }
 
-            .hero-buttons .btn {
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                min-height: 46px;
+                font-size: 14px;
+                padding: 12px 13px;
+            }
+
+            .form-group textarea {
+                min-height: 110px;
+            }
+
+            .appointment-form .btn {
                 width: 100%;
+            }
+
+            /* =========================
+               MAP
+               ========================= */
+
+            .map,
+            .map-placeholder {
+                min-height: 300px;
+                height: 300px;
+            }
+
+            /* =========================
+               FOOTER
+               ========================= */
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding-bottom: 35px;
+            }
+
+            footer {
+                padding-top: 55px;
+            }
+
+            .copyright {
+                padding-bottom: 82px;
+            }
+
+            /* =========================
+               FLOATING ACTION BUTTONS
+               ========================= */
+
+            .floating-buttons {
+                right: 14px;
+                bottom: 78px;
+                gap: 8px;
+            }
+
+            .floating-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            /* =========================
+               NATIVE-APP QUICK NAV
+               ========================= */
+
+            .mobile-bottom-nav {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                height: 64px;
+                padding-bottom: env(safe-area-inset-bottom);
+                background: rgba(255,255,255,.97);
+                border-top: 1px solid rgba(0,0,0,.08);
+                box-shadow: 0 -8px 26px rgba(0,0,0,.10);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+            }
+
+            .mobile-bottom-nav a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                min-height: 64px;
+                color: #123b3e;
+                font-size: 10px;
+                font-weight: 700;
+                -webkit-tap-highlight-color: transparent;
+                transition: color .25s ease, background .25s ease;
+            }
+
+            .mobile-bottom-nav a:active {
+                background: #eef9f9;
+            }
+
+            .mobile-bottom-nav i {
+                font-size: 18px;
+                color: var(--primary);
+            }
+
+            .mobile-bottom-nav a.book {
+                color: white;
+                background: var(--primary);
+            }
+
+            .mobile-bottom-nav a.book i {
+                color: white;
             }
         }
 
-    
-/* Original card animations preserved */
-.service-card {
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-}
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-    border-color: var(--primary, #0ea5a8);
-}
-.service-icon {
-    transition: transform 0.3s ease;
-}
-.service-card:hover .service-icon {
-    transform: scale(1.08) rotate(3deg);
-}
-.why-card {
-    transition: transform 0.3s ease;
-}
+        @media (max-width: 380px) {
+
+            .container {
+                width: calc(100% - 22px);
+            }
+
+            .hero {
+                min-height: 590px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                padding: 16px 8px;
+            }
+
+            .stat h3 {
+                font-size: 22px;
+            }
+
+            .service-card,
+            .testimonial,
+            .why-card {
+                padding: 19px;
+            }
+
+            .about-content h2,
+            .doctor-info h2 {
+                font-size: 29px;
+            }
+        }
+
+        /* Touch devices: keep desktop-style UI but remove fake hover effects */
+        @media (hover: none) and (pointer: coarse) {
+            .service-card:hover,
+            .testimonial:hover,
+            .why-card:hover,
+            .btn:hover,
+            .floating-btn:hover {
+                transform: none;
+            }
+
+            .service-card:hover {
+                box-shadow: none;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto !important;
+            }
+
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
 
-.testimonial {
-    transition: transform 0.3s ease;
-}
-.testimonial:hover {
-    transform: translateY(-5px);
-}
 
-
-/* Review button */
-.review-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 13px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    border: 2px solid #f4b400;
-    background: #f4b400;
-    color: #fff;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: pointer;
-}
-.review-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-
-/* WHY CHOOSE US: hover animation only, absolutely no color/background change */
-.why-card,
-.why-card:hover,
-.why-card:focus,
-.why-card:active {
-    background-color: #0f3033 !important;
-    background: #0f3033 !important;
-    color: inherit !important;
-    border-color: rgba(255,255,255,0.12) !important;
-    box-shadow: none !important;
-    filter: none !important;
-    transition: transform 0.3s ease !important;
-}
-
-.why-card:hover {
-    transform: translateY(-5px) !important;
-}
-
-.why-card h3,
-.why-card:hover h3,
-.why-card p,
-.why-card:hover p,
-.why-card .why-icon,
-.why-card:hover .why-icon {
-    color: inherit !important;
-    background-color: transparent !important;
-    filter: none !important;
-}
-
-
-/* Image rendering/performance */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* =========================================================
-   MOBILE-FIRST EXPERIENCE — added without changing desktop
-   ========================================================= */
-@media (max-width: 600px) {
-    html { scroll-padding-top: 70px; }
-    body {
-        padding-bottom: 64px;
-        overflow-x: hidden;
-    }
-
-    /* Compact header */
-    .topbar {
-        display: none !important;
-    }
-
-    nav {
-        height: 64px !important;
-        padding: 0 14px !important;
-    }
-
-    .logo {
-        font-size: 14px !important;
-        gap: 8px !important;
-    }
-
-    .logo-img-wrapper {
-        width: 42px !important;
-        height: 42px !important;
-        border-radius: 10px !important;
-    }
-
-    .logo-text span {
-        font-size: 9px !important;
-    }
-
-    .nav-links {
-        gap: 0 !important;
-    }
-
-    /* Compact hero */
-    .hero {
-        min-height: 560px !important;
-        padding: 55px 0 70px !important;
-        align-items: center !important;
-    }
-
-    .hero-content {
-        max-width: 100% !important;
-        padding: 0 18px !important;
-    }
-
-    .hero-badge {
-        padding: 7px 12px !important;
-        margin-bottom: 15px !important;
-        font-size: 11px !important;
-    }
-
-    .hero h1 {
-        font-size: 38px !important;
-        line-height: 1.08 !important;
-        margin-bottom: 15px !important;
-    }
-
-    .hero p {
-        font-size: 14px !important;
-        line-height: 1.65 !important;
-        margin-bottom: 20px !important;
-    }
-
-    .hero-buttons,
-    .hero-actions {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 9px !important;
-    }
-
-    .hero-buttons a,
-    .hero-actions a {
-        width: 100% !important;
-        justify-content: center !important;
-        padding: 12px 10px !important;
-        font-size: 13px !important;
-    }
-
-    /* Sections become shorter and cleaner */
-    .section {
-        padding: 48px 0 !important;
-    }
-
-    .container {
-        width: min(100% - 28px, 1180px) !important;
-    }
-
-    .section-title {
-        margin-bottom: 24px !important;
-    }
-
-    .section-title span {
-        font-size: 11px !important;
-    }
-
-    .section-title h2 {
-        font-size: 29px !important;
-        line-height: 1.15 !important;
-        margin: 8px 0 10px !important;
-    }
-
-    .section-title p {
-        font-size: 13px !important;
-        line-height: 1.6 !important;
-    }
-
-    /* Stats: compact 2 x 2 */
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0 !important;
-    }
-
-    .stat {
-        padding: 18px 8px !important;
-    }
-
-    .stat h3 {
-        font-size: 27px !important;
-    }
-
-    .stat p {
-        font-size: 11px !important;
-    }
-
-    /* Services: swipe horizontally instead of a very long stack */
-    .service-grid {
-        display: flex !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        gap: 14px !important;
-        padding: 4px 4px 14px !important;
-        margin-right: -14px !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none !important;
-    }
-
-    .service-grid::-webkit-scrollbar,
-    .testimonial-grid::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    .service-grid .service-card {
-        flex: 0 0 82% !important;
-        min-width: 82% !important;
-        scroll-snap-align: start !important;
-        padding: 22px !important;
-    }
-
-    .service-card h3 {
-        font-size: 18px !important;
-    }
-
-    .service-card p {
-        font-size: 13px !important;
-        line-height: 1.6 !important;
-    }
-
-    /* Keep card animation, but no hover-style effects on touch devices */
-    .service-card:hover {
-        transform: none !important;
-        box-shadow: inherit !important;
-    }
-
-    /* About / doctor images */
-    .about-image img,
-    .doctor-image img {
-        height: 280px !important;
-        border-radius: 18px !important;
-    }
-
-    .about-content h2,
-    .doctor-info h2 {
-        font-size: 30px !important;
-        line-height: 1.2 !important;
-    }
-
-    .about-content p,
-    .doctor-info p {
-        font-size: 14px !important;
-        line-height: 1.7 !important;
-    }
-
-    .check-list {
-        margin: 18px 0 !important;
-    }
-
-    .check-list li {
-        font-size: 13px !important;
-        margin: 9px 0 !important;
-    }
-
-    /* Why Choose Us: compact 2-column cards, NO color change */
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-
-    .why-card,
-    .why-card:hover,
-    .why-card:focus,
-    .why-card:active {
-        padding: 18px 13px !important;
-        min-height: 150px !important;
-        background: rgba(255,255,255,0.04) !important;
-        color: inherit !important;
-        border-color: rgba(255,255,255,0.1) !important;
-        box-shadow: none !important;
-        filter: none !important;
-    }
-
-    .why-card:hover {
-        transform: none !important;
-    }
-
-    .why-card i {
-        font-size: 23px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .why-card h3 {
-        font-size: 15px !important;
-        line-height: 1.3 !important;
-    }
-
-    .why-card p {
-        font-size: 11px !important;
-        line-height: 1.5 !important;
-    }
-
-    /* Reviews: swipe cards */
-    .testimonial-grid {
-        display: flex !important;
-        overflow-x: auto !important;
-        gap: 14px !important;
-        padding: 4px 4px 14px !important;
-        margin-right: -14px !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none !important;
-    }
-
-    .testimonial-grid .testimonial {
-        flex: 0 0 86% !important;
-        min-width: 86% !important;
-        scroll-snap-align: start !important;
-        padding: 22px !important;
-    }
-
-    .testimonial:hover {
-        transform: none !important;
-    }
-
-    .review-button-wrap {
-        margin: 16px 0 20px !important;
-    }
-
-    .review-button {
-        width: 100% !important;
-        padding: 12px 18px !important;
-    }
-
-    /* FAQ */
-    .faq-question {
-        padding: 16px !important;
-        font-size: 14px !important;
-    }
-
-    .faq-answer {
-        font-size: 13px !important;
-        line-height: 1.6 !important;
-    }
-
-    /* Appointment */
-    .appointment-info,
-    .appointment-form {
-        padding: 22px !important;
-    }
-
-    .appointment-info h2 {
-        font-size: 28px !important;
-    }
-
-    .appointment-info p,
-    .appointment-form label {
-        font-size: 13px !important;
-    }
-
-    .form-grid {
-        gap: 12px !important;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        min-height: 46px !important;
-        font-size: 14px !important;
-    }
-
-    /* Map */
-    .map-wrap iframe,
-    .map-container iframe {
-        min-height: 280px !important;
-        height: 280px !important;
-    }
-
-    /* Footer */
-    .footer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 22px !important;
-    }
-
-    /* Fixed mobile quick navigation */
-    .mobile-bottom-nav {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        height: 62px;
-        background: rgba(255,255,255,0.97);
-        border-top: 1px solid rgba(0,0,0,0.10);
-        box-shadow: 0 -6px 24px rgba(0,0,0,0.10);
-        backdrop-filter: blur(12px);
-    }
-
-    .mobile-bottom-nav a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        color: #123b3e;
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 700;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .mobile-bottom-nav i {
-        font-size: 18px;
-        color: #087f8c;
-    }
-
-    .mobile-bottom-nav a.book {
-        color: white;
-        background: #087f8c;
-    }
-
-    .mobile-bottom-nav a.book i {
-        color: white;
-    }
-}
-
-/* Hidden on desktop/tablet */
-.mobile-bottom-nav {
-    display: none;
-}
 
 </style>
-<!-- Add your real website URL here when the site is deployed:
-<link rel="canonical" href="https://YOUR-DOMAIN.example/">
--->
-
-<style id="premium-mobile-responsive">
-/* =========================================================
-   PREMIUM MOBILE RESPONSIVE OVERRIDE
-   Desktop/tablet design above 767px remains unchanged.
-   ========================================================= */
-
-@media (max-width: 767px) {
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 72px;
-    }
-
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        padding-bottom: calc(68px + env(safe-area-inset-bottom));
-        -webkit-text-size-adjust: 100%;
-    }
-
-    .container {
-        width: calc(100% - 28px) !important;
-        max-width: none !important;
-    }
-
-    .section {
-        padding: 52px 0 !important;
-    }
-
-    /* ---------- MOBILE HEADER ---------- */
-    .topbar {
-        display: none !important;
-    }
-
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 5000;
-    }
-
-    nav {
-        height: 64px !important;
-        min-height: 64px;
-        padding: 0 !important;
-    }
-
-    .logo {
-        min-width: 0;
-        max-width: calc(100% - 55px);
-        gap: 8px !important;
-        font-size: 14px !important;
-        line-height: 1.05 !important;
-    }
-
-    .logo-img-wrapper {
-        flex: 0 0 42px;
-        width: 42px !important;
-        height: 42px !important;
-        border-radius: 10px !important;
-    }
-
-    .logo-text {
-        min-width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .logo-text span {
-        font-size: 8.5px !important;
-        margin-top: 3px;
-    }
-
-    .menu-btn {
-        display: grid !important;
-        place-items: center;
-        width: 44px;
-        height: 44px;
-        flex: 0 0 44px;
-        border-radius: 12px;
-        background: #eef8f8;
-        font-size: 20px !important;
-    }
-
-    .nav-links {
-        position: fixed !important;
-        top: 64px !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        max-height: calc(100dvh - 64px);
-        overflow-y: auto;
-        padding: 10px 14px 20px !important;
-        gap: 3px !important;
-        background: rgba(255,255,255,.98) !important;
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        border-top: 1px solid #edf3f3;
-        box-shadow: 0 18px 40px rgba(16,42,46,.14);
-        display: none;
-        flex-direction: column !important;
-        align-items: stretch !important;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links li a {
-        min-height: 48px;
-        display: flex !important;
-        align-items: center;
-        width: 100%;
-        padding: 11px 14px;
-        border-radius: 10px;
-        font-size: 14px !important;
-    }
-
-    .nav-links li a:not(.nav-cta):active {
-        background: #eef8f8;
-    }
-
-    .nav-links .nav-cta {
-        justify-content: center;
-        margin-top: 5px;
-        min-height: 48px;
-    }
-
-    /* ---------- HERO ---------- */
-    .hero {
-        min-height: 590px !important;
-        padding: 58px 0 72px !important;
-        background-position: 62% center !important;
-    }
-
-    .hero .container {
-        width: 100% !important;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: 100% !important;
-        padding: 0 20px !important;
-    }
-
-    .hero-badge {
-        max-width: 100%;
-        width: fit-content;
-        padding: 7px 11px !important;
-        margin-bottom: 16px !important;
-        font-size: 10.5px !important;
-        line-height: 1.3;
-    }
-
-    .hero h1 {
-        max-width: 360px;
-        font-size: clamp(34px, 10vw, 44px) !important;
-        line-height: 1.08 !important;
-        margin-bottom: 15px !important;
-    }
-
-    .hero p {
-        max-width: 390px;
-        font-size: 14px !important;
-        line-height: 1.65 !important;
-        margin-bottom: 22px !important;
-    }
-
-    .hero-buttons {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px !important;
-        width: 100%;
-        max-width: 390px;
-    }
-
-    .hero-buttons .btn {
-        width: 100% !important;
-        min-height: 46px;
-        padding: 11px 8px !important;
-        font-size: 12.5px;
-        white-space: nowrap;
-    }
-
-    /* ---------- STATS ---------- */
-    .stats {
-        margin-top: -30px !important;
-        z-index: 20;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0 !important;
-        padding: 8px !important;
-        border-radius: 17px !important;
-    }
-
-    .stat {
-        min-width: 0;
-        padding: 15px 7px !important;
-        border-right: 1px solid var(--border) !important;
-        border-bottom: 1px solid var(--border) !important;
-    }
-
-    .stat:nth-child(2n) {
-        border-right: 0 !important;
-    }
-
-    .stat:nth-child(n+3) {
-        border-bottom: 0 !important;
-    }
-
-    .stat h3 {
-        font-size: 24px !important;
-        line-height: 1.15;
-    }
-
-    .stat p {
-        font-size: 10.5px !important;
-        line-height: 1.35;
-        margin-top: 4px;
-    }
-
-    /* ---------- SECTION HEADINGS ---------- */
-    .section-title {
-        margin-bottom: 28px !important;
-        padding: 0 4px;
-    }
-
-    .section-title span {
-        font-size: 10.5px !important;
-        letter-spacing: 1.5px;
-    }
-
-    .section-title h2 {
-        font-size: clamp(28px, 8vw, 34px) !important;
-        line-height: 1.12 !important;
-        margin: 8px 0 10px !important;
-    }
-
-    .section-title p {
-        font-size: 13px !important;
-        line-height: 1.6;
-    }
-
-    /* ---------- SERVICES ---------- */
-    .service-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-
-    .service-card {
-        padding: 20px !important;
-        border-radius: 16px !important;
-        min-width: 0 !important;
-    }
-
-    .service-icon {
-        width: 48px !important;
-        height: 48px !important;
-        margin-bottom: 13px !important;
-        border-radius: 13px !important;
-        font-size: 19px !important;
-    }
-
-    .service-card h3 {
-        font-size: 17px !important;
-        line-height: 1.3;
-        margin-bottom: 6px;
-    }
-
-    .service-card p {
-        font-size: 12.5px !important;
-        line-height: 1.6 !important;
-    }
-
-    .service-card:hover {
-        transform: none !important;
-    }
-
-    /* ---------- ABOUT ---------- */
-    .about-grid,
-    .doctor-grid,
-    .appointment-box {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
-    }
-
-    .about-image,
-    .doctor-image {
-        width: 100%;
-    }
-
-    .about-image img,
-    .doctor-image img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 360px;
-        min-height: 240px;
-        object-fit: cover !important;
-        object-position: center !important;
-        border-radius: 18px !important;
-    }
-
-    .experience {
-        right: 12px !important;
-        bottom: 12px !important;
-        padding: 13px 16px !important;
-        border-radius: 14px !important;
-    }
-
-    .experience strong {
-        font-size: 27px !important;
-        line-height: 1;
-    }
-
-    .experience {
-        font-size: 11px;
-        line-height: 1.3;
-    }
-
-    .about-content h2,
-    .doctor-info h2 {
-        font-size: 31px !important;
-        line-height: 1.15 !important;
-        margin: 9px 0 14px !important;
-    }
-
-    .about-content p,
-    .doctor-info p {
-        font-size: 13.5px !important;
-        line-height: 1.7 !important;
-    }
-
-    .check-list {
-        margin: 17px 0 !important;
-    }
-
-    .check-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        font-size: 12.5px !important;
-        line-height: 1.5;
-        margin: 9px 0 !important;
-    }
-
-    .check-list i {
-        flex: 0 0 auto;
-        margin-right: 0 !important;
-        margin-top: 3px;
-    }
-
-    /* ---------- WHY US ---------- */
-    .why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 10px !important;
-    }
-
-    .why-card {
-        min-width: 0;
-        padding: 18px 13px !important;
-        border-radius: 15px !important;
-    }
-
-    .why-card i {
-        font-size: 21px !important;
-        margin-bottom: 11px !important;
-    }
-
-    .why-card h3 {
-        font-size: 14px !important;
-        line-height: 1.3;
-        margin-bottom: 7px;
-    }
-
-    .why-card p {
-        font-size: 10.8px !important;
-        line-height: 1.5;
-    }
-
-    .why-card:hover {
-        transform: none !important;
-    }
-
-    /* ---------- DOCTOR ---------- */
-    .doctor-grid {
-        gap: 25px !important;
-    }
-
-    .doctor-image img {
-        max-height: 330px;
-    }
-
-    .qualification {
-        font-size: 11.5px;
-        padding: 7px 10px;
-        margin: 10px 0 14px;
-    }
-
-    .doctor-info br {
-        display: none;
-    }
-
-    .doctor-info p + p {
-        margin-top: 12px;
-    }
-
-    /* ---------- REVIEWS ---------- */
-    .testimonial-grid {
-        display: flex !important;
-        overflow-x: auto !important;
-        gap: 12px !important;
-        padding: 3px 3px 12px !important;
-        margin-right: -14px !important;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .testimonial-grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    .testimonial-grid .testimonial {
-        flex: 0 0 calc(100% - 26px) !important;
-        min-width: calc(100% - 26px) !important;
-        scroll-snap-align: start;
-        padding: 20px !important;
-        border-radius: 16px !important;
-    }
-
-    .testimonial:hover {
-        transform: none !important;
-    }
-
-    .testimonial p {
-        font-size: 13px;
-        line-height: 1.65;
-    }
-
-    .review-button {
-        width: 100%;
-        min-height: 46px;
-    }
-
-    /* ---------- FAQ ---------- */
-    .faq-container {
-        width: 100%;
-    }
-
-    .faq-question {
-        padding: 17px 2px !important;
-        gap: 15px;
-        font-size: 13.5px !important;
-        line-height: 1.45;
-    }
-
-    .faq-question i {
-        flex: 0 0 auto;
-    }
-
-    .faq-answer p {
-        font-size: 12.5px;
-        line-height: 1.65;
-        padding: 0 2px 17px;
-    }
-
-    /* ---------- APPOINTMENT ---------- */
-    .appointment-box {
-        border-radius: 18px !important;
-    }
-
-    .appointment-info,
-    .appointment-form {
-        padding: 24px 18px !important;
-    }
-
-    .appointment-info h2 {
-        font-size: 30px !important;
-        line-height: 1.15;
-    }
-
-    .contact-detail div {
-        gap: 11px;
-        margin: 14px 0;
-        font-size: 12.5px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-    }
-
-    .form-group.full {
-        grid-column: auto !important;
-    }
-
-    .form-group {
-        margin-bottom: 13px;
-    }
-
-    .form-group label {
-        font-size: 12px !important;
-        margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        min-height: 46px !important;
-        padding: 11px 12px !important;
-        font-size: 14px !important;
-        border-radius: 10px !important;
-    }
-
-    .form-group textarea {
-        min-height: 105px !important;
-    }
-
-    .appointment-form .btn {
-        width: 100%;
-        min-height: 48px;
-    }
-
-    .appointment-success {
-        padding: 32px 17px !important;
-    }
-
-    .appointment-success h3 {
-        font-size: 25px !important;
-    }
-
-    /* ---------- MAP ---------- */
-    .map,
-    .map-placeholder {
-        height: 290px !important;
-        min-height: 290px !important;
-    }
-
-    .map-placeholder {
-        padding: 25px 16px !important;
-    }
-
-    .map-placeholder i {
-        font-size: 34px !important;
-    }
-
-    .map-placeholder h2 {
-        font-size: 25px;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-        padding-top: 48px !important;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 25px !important;
-        padding-bottom: 30px !important;
-    }
-
-    footer h3 {
-        font-size: 17px;
-        margin-bottom: 12px;
-    }
-
-    footer p,
-    .footer-links li {
-        font-size: 12.5px !important;
-        line-height: 1.6;
-    }
-
-    .socials {
-        margin-top: 14px;
-    }
-
-    .copyright {
-        padding: 16px 0 !important;
-        font-size: 11px !important;
-        line-height: 1.5;
-    }
-
-    /* ---------- FLOATING BUTTONS ---------- */
-    .floating-buttons {
-        right: 12px !important;
-        bottom: calc(78px + env(safe-area-inset-bottom)) !important;
-        gap: 8px !important;
-    }
-
-    .floating-btn {
-        width: 46px !important;
-        height: 46px !important;
-        font-size: 17px !important;
-    }
-
-    /* ---------- MOBILE QUICK NAV ---------- */
-    .mobile-bottom-nav {
-        display: grid !important;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 6000;
-        height: calc(62px + env(safe-area-inset-bottom));
-        padding-bottom: env(safe-area-inset-bottom);
-        grid-template-columns: repeat(4, 1fr);
-        background: rgba(255,255,255,.97);
-        border-top: 1px solid rgba(0,0,0,.08);
-        box-shadow: 0 -8px 25px rgba(0,0,0,.10);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-    }
-
-    .mobile-bottom-nav a {
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        font-size: 9.5px;
-        font-weight: 700;
-        color: #123b3e;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .mobile-bottom-nav i {
-        font-size: 17px;
-        color: var(--primary);
-    }
-
-    .mobile-bottom-nav a.book {
-        color: white;
-        background: var(--primary);
-    }
-
-    .mobile-bottom-nav a.book i {
-        color: white;
-    }
-
-    /* ---------- TOUCH / ACCESSIBILITY ---------- */
-    a, button, input, select, textarea {
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .btn,
-    .review-button,
-    .nav-links a {
-        touch-action: manipulation;
-    }
-
-    .reveal-on-scroll {
-        transform: translateY(10px);
-    }
-}
-
-/* Very small phones */
-@media (max-width: 380px) {
-    .container {
-        width: calc(100% - 22px) !important;
-    }
-
-    .hero-content {
-        padding: 0 15px !important;
-    }
-
-    .hero {
-        min-height: 570px !important;
-    }
-
-    .hero h1 {
-        font-size: 33px !important;
-    }
-
-    .hero-buttons {
-        grid-template-columns: 1fr !important;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .why-card {
-        min-height: auto !important;
-    }
-
-    .logo-text {
-        font-size: 13px;
-    }
-
-    .logo-text span {
-        font-size: 8px !important;
-    }
-}
-</style>
-
 </head>
 
 <body>
