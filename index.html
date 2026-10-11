@@ -24,6 +24,7 @@
 <meta content="Sri Sai Dental Clinic and Implant Center | Premium Dental Care" property="og:title"/>
 <meta content="Transforming Smiles with Care. Professional dental care with modern technology in Tirupati." property="og:description"/>
 <meta content="website" property="og:type"/>
+<meta content="en_IN" property="og:locale"/>
 <!-- Performance: avoid duplicating large inline image data; hero image is loaded by the page itself. -->
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -33,9 +34,7 @@
 <!-- Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 <!-- Favicon -->
-<link href="data:image/svg+xml,
-    &lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;
-    &lt;text y=%22.9em%22 font-size=%2290%22&gt;🦷&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E" rel="icon"/>
 <style>
 
         /* ==============================
@@ -2999,6 +2998,171 @@ img[loading="lazy"] { content-visibility:auto; }
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style>
+<style id="layout-polish">
+/* Logo: the old wrapper added padding, a tinted box, border, shadow, a -4px shift and a fixed square size, so a logo with its own margins floated inside a gap. */
+header .logo,footer .logo{display:flex!important;align-items:center!important;gap:10px!important;margin:0!important;padding:0!important;line-height:1.1!important}
+header .logo-img-wrapper,footer .logo-img-wrapper{display:block!important;width:auto!important;height:auto!important;flex:0 0 auto!important;margin:0!important;padding:0!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;transform:none!important;line-height:0!important}
+header .logo-img-wrapper img,footer .logo-img-wrapper img{display:block!important;height:48px!important;width:auto!important;max-width:none!important;object-fit:contain!important}
+header .logo-text,footer .logo-text{min-width:0}
+@media (max-width:600px){header .logo{gap:8px!important}header .logo-img-wrapper img{height:40px!important}}
+@media (max-width:380px){header .logo-img-wrapper img{height:36px!important}}
+/* About and doctor images: one size, one ratio, always cropped with cover (was 560px vs 500px, and contain on mobile). */
+.about-grid,.doctor-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(32px,5vw,64px)!important;align-items:center!important}
+.about-image,.doctor-image{position:relative;min-width:0}
+.about-image img,.doctor-image img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:5/4;object-fit:cover!important;object-position:center 30%;border-radius:24px!important}
+.doctor-image img{object-position:center 18%}
+.experience{right:16px!important;bottom:16px!important}
+@media (max-width:900px){
+  .about-grid,.doctor-grid{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  .about-image img,.doctor-image img{aspect-ratio:4/3;border-radius:20px!important}
+  .experience{position:absolute!important;right:12px!important;bottom:12px!important;margin:0!important;padding:14px 16px!important}
+}
+/* Spacing */
+.section{padding:clamp(56px,8vw,96px) 0}
+.page-shell{min-height:0}
+.premium-page{min-height:0}
+html,body{overflow-x:clip}
+</style>
+<style id="ui-fixes-2">
+/* LOGO: no dead space. Icon height follows the two text lines, text lines share one left edge and one width. */
+header .logo,footer .logo{gap:6px!important;align-items:stretch!important}
+header .logo-img-wrapper,footer .logo-img-wrapper{align-self:stretch!important;display:flex!important;align-items:center!important}
+header .logo-img-wrapper img,footer .logo-img-wrapper img{height:100%!important;max-height:56px!important;width:auto!important}
+footer .logo-img-wrapper{background:#fffdf5!important;padding:4px!important;border-radius:10px!important}
+header .logo-text,footer .logo-text{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important;line-height:1!important}
+.logo-title{display:block;width:max-content;font-weight:900;line-height:1;letter-spacing:0}
+.logo-text span{display:block;line-height:1!important;margin:0!important;padding:0!important;white-space:nowrap}
+/* NAV */
+.nav-links li{display:flex;align-items:center;flex:0 0 auto}
+.nav-links a{white-space:nowrap}
+.social-nav-item:not(:has(a)){display:none!important}
+@media (min-width:901px){
+ .nav-links{flex-wrap:nowrap!important;gap:clamp(12px,1.7vw,26px)!important}
+ .nav-links .service-dropdown>a{background:rgba(8,127,140,.10);color:var(--primary);padding:9px 16px;border-radius:999px;font-weight:700;border:1px solid rgba(8,127,140,.22)}
+ .nav-links .service-dropdown>a:hover{background:var(--primary);color:#fff}
+ .nav-links .nav-cta{display:inline-flex!important;align-items:center;justify-content:center;height:44px;padding:0 22px!important;margin:0!important;line-height:1!important;border-radius:999px;white-space:nowrap;animation:none!important;transform:none!important;box-shadow:0 6px 16px rgba(8,127,140,.28)}
+ .nav-links .nav-cta:hover{transform:translateY(-1px)!important}
+}
+@media (min-width:901px) and (max-width:1100px){.nav-links a{font-size:13px}.nav-links .nav-cta{padding:0 16px!important}.nav-links .service-dropdown>a{padding:8px 12px}}
+@media (max-width:900px){.nav-links .nav-cta{height:48px;justify-content:center;animation:none!important;margin-top:6px}.nav-links .service-dropdown>a{font-weight:700;color:var(--primary)}}
+/* SERVICES HIGHLIGHT */
+.home-services{padding:clamp(48px,6vw,80px) 0;background:linear-gradient(180deg,#f2fbfb,#fff)}
+.hs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.hs-kicker{display:block;color:var(--primary);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.hs-head h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,42px);line-height:1.15;margin:0}
+.hs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.hs-grid a{display:flex;align-items:center;gap:14px;padding:18px 20px;background:#fff;border:1px solid rgba(8,127,140,.18);border-radius:16px;color:var(--dark);transition:transform .2s,box-shadow .2s,border-color .2s}
+.hs-grid a i{flex:0 0 46px;height:46px;display:grid;place-items:center;border-radius:12px;background:rgba(8,127,140,.10);color:var(--primary);font-size:19px;transition:.2s}
+.hs-grid a b{font-size:16px;line-height:1.3}
+.hs-grid a:hover{transform:translateY(-3px);border-color:var(--primary);box-shadow:0 14px 30px rgba(8,127,140,.16)}
+.hs-grid a:hover i{background:var(--primary);color:#fff}
+@media (max-width:900px){.hs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.hs-grid{grid-template-columns:1fr}.hs-all{width:100%}}
+</style>
+<style id="ui-fixes-3">
+/* Logo text: starts right next to the logo on the left; both lines share the same left and right edge */
+header .logo,footer .logo{gap:5px!important}
+header .logo-text,footer .logo-text{width:max-content!important;margin:0!important;padding:0!important;text-align:left!important;align-items:stretch!important}
+.logo-title{display:flex!important;justify-content:space-between;align-self:stretch;width:auto!important;margin:0!important;letter-spacing:0!important;font-size:1.05em}
+.logo-title b{display:block;font-weight:inherit}
+.logo-title b.sp{width:.4em}
+.logo-text span{text-align:left}
+</style>
+<style id="ui-fixes-4">
+/* One shared left edge: logo sits in the left corner and the home page text starts on the same line */
+:root{--edge:clamp(12px,2vw,28px)}
+header > .container,header .container,header nav{width:100%!important;max-width:none!important;margin:0!important;padding-left:var(--edge)!important;padding-right:var(--edge)!important;box-sizing:border-box}
+header .logo{margin:0!important;padding:0!important}
+.hero .container,.hero-layout{width:100%!important;max-width:none!important;margin:0!important;padding-left:var(--edge)!important;padding-right:var(--edge)!important;box-sizing:border-box}
+.hero-content{margin:0!important;padding-left:0!important;text-align:left!important;max-width:720px!important}
+.hero-content .hero-buttons{justify-content:flex-start!important}
+</style>
+<style id="mobile-ux">
+@media (max-width:900px){
+  html{-webkit-text-size-adjust:100%}
+  /* one set of quick actions instead of three stacked layers */
+  .mobile-cta-bar,.floating-buttons{display:none!important}
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom))!important}
+  .mobile-bottom-nav{grid-template-columns:repeat(5,1fr)!important;height:calc(64px + env(safe-area-inset-bottom))!important}
+  .mobile-bottom-nav a{min-height:64px;font-size:11px;position:relative}
+  .mobile-bottom-nav a.book{background:transparent!important;color:#123b3e!important}
+  .mobile-bottom-nav a.book i{width:52px;height:52px;margin-top:-26px;display:grid;place-items:center;border-radius:50%;background:var(--primary);color:#fff!important;border:4px solid #fff;box-shadow:0 8px 18px rgba(8,127,140,.38);font-size:18px}
+  .mobile-bottom-nav a.book span{margin-top:-2px}
+  .mobile-bottom-nav a .fa-whatsapp{color:#1fa855}
+  #backToTop{right:14px!important;bottom:calc(84px + env(safe-area-inset-bottom))!important}
+  /* hero */
+  .hero-content{text-align:left}
+  .hero-badge{font-size:12px}
+  .hero-buttons{display:flex!important;flex-direction:column!important;gap:12px!important;align-items:stretch!important}
+  .hero-buttons .btn{width:100%!important;min-height:50px;justify-content:center}
+  /* rhythm */
+  .section{padding:48px 0!important}
+  .section-title{margin-bottom:30px!important}
+  .home-services{padding:44px 0}
+  .hs-head{margin-bottom:20px}
+  .hs-grid{gap:10px}
+  .hs-grid a{padding:14px 16px}
+  /* touch + forms (16px stops iOS zooming into fields) */
+  .btn{min-height:48px}
+  input,select,textarea{font-size:16px!important;min-height:48px}
+  textarea{min-height:110px}
+  .nav-links a{min-height:50px}
+  img,iframe,video{max-width:100%}
+}
+@media (max-width:380px){
+  .mobile-bottom-nav a{font-size:10px}
+  .hero h1{font-size:clamp(30px,9.5vw,38px)!important}
+}
+</style>
+<style id="app-ui">
+/* Header logo and home text: the hero layout had its own side padding on top of the container's, so the text sat further in than the logo */
+.hero-layout{padding-left:0!important;padding-right:0!important}
+.app-quick{display:none}
+@media (max-width:900px){
+  a,button{-webkit-tap-highlight-color:transparent}
+  .btn:active,.hs-grid a:active,.aq-grid a:active,.service-card:active,.mobile-bottom-nav a:active{transform:scale(.97)}
+  /* app bar */
+  header{background:rgba(255,255,255,.97)!important;box-shadow:0 1px 0 rgba(8,127,140,.10),0 6px 18px rgba(16,42,46,.05)}
+  .menu-btn{background:rgba(8,127,140,.10)!important;color:var(--primary)!important;border-radius:14px!important}
+  .nav-links{border-radius:0 0 22px 22px!important;box-shadow:0 22px 40px rgba(16,42,46,.18)!important}
+  .nav-links li a{font-size:16px;font-weight:600}
+  /* hero as an app banner */
+  .hero{min-height:min(540px,calc(100svh - 170px))!important;border-radius:0 0 30px 30px;overflow:hidden}
+  .hero-content{padding:36px 0 64px!important}
+  .hero h1{font-size:clamp(30px,8.4vw,40px)!important}
+  /* quick action tiles */
+  .app-quick{display:block;position:relative;z-index:5;margin-top:-34px;padding-bottom:6px}
+  .aq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 10px;background:#fff;border-radius:22px;box-shadow:0 14px 36px rgba(16,42,46,.14)}
+  .aq-grid a{display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--dark);font-size:12px;font-weight:700;transition:transform .15s}
+  .aq-grid i{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:rgba(8,127,140,.10);color:var(--primary);font-size:19px}
+  .aq-grid a:nth-child(2) i{background:rgba(31,168,85,.12);color:#1fa855}
+  .aq-grid a:nth-child(4) i{background:var(--primary);color:#fff}
+  .aq-card{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:14px 16px;background:#fff;border:1px solid rgba(8,127,140,.14);border-radius:18px}
+  .aq-card>i{flex:0 0 40px;height:40px;display:grid;place-items:center;border-radius:12px;background:rgba(8,127,140,.10);color:var(--primary)}
+  .aq-card b{display:block;font-size:15px;line-height:1.3;margin-bottom:2px}
+  .aq-card span{display:block;font-size:13.5px;line-height:1.45;color:#5b6f73}
+  /* cards read as app cards */
+  .service-card,.testimonial,.why-card,.stat{border-radius:20px}
+  /* bottom tabs: current page highlighted */
+  .mobile-bottom-nav a.on:not(.book){color:var(--primary)}
+  .mobile-bottom-nav a.on:not(.book)::before{content:"";position:absolute;top:0;left:30%;right:30%;height:3px;border-radius:0 0 4px 4px;background:var(--primary)}
+}
+</style>
+<style id="logo-footer-align-fix">
+/* HEADER: .container already adds the side padding; nav added it a second time,
+   so the logo + its text sat double-indented (55px desktop / 24px mobile).
+   Now the logo and its text start exactly on the same left line as the hero text. */
+header > .container > nav{padding-left:0!important;padding-right:0!important;margin-left:0!important}
+header .logo{margin-left:0!important;padding-left:0!important;justify-content:flex-start!important}
+header .logo-text{margin-left:0!important}
+
+/* FOOTER: same left/right edge as header + hero, so the footer name lines up with the header name */
+footer > .container{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important;padding-left:var(--edge)!important;padding-right:var(--edge)!important;box-sizing:border-box}
+footer .footer-grid > div:first-child .logo{width:max-content;max-width:100%;margin:0!important;padding:0!important;justify-content:flex-start!important;align-items:center!important;gap:8px!important}
+footer .logo-text{margin:0!important;padding:0!important;text-align:left!important}
+footer .footer-grid > div:first-child p,footer .footer-grid > div:first-child .socials{margin-left:0!important;padding-left:0!important}
+footer .copyright{text-align:left}
+</style>
 </head>
 <body>
 <div id="scrollProgress" aria-hidden="true"></div>
@@ -3042,9 +3206,7 @@ img[loading="lazy"] { content-visibility:auto; }
 <div class="logo-img-wrapper">
 <img alt="Sri Sai Dental Clinic Logo" decoding="async" height="52" src="logo.png" width="52"/>
 </div>
-<div class="logo-text">
-                    SRI SAI
-                    <span>Dental Clinic &amp; Implant Center</span>
+<div class="logo-text"><strong class="logo-title" aria-label="SRI SAI"><b>S</b><b>R</b><b>I</b><b class="sp"></b><b>S</b><b>A</b><b>I</b></strong><span>Dental Clinic &amp; Implant Center</span>
 </div>
 </a>
 <ul class="nav-links" id="navLinks">
@@ -3102,6 +3264,29 @@ img[loading="lazy"] { content-visibility:auto; }
 </div>
 </div>
 </section>
+<section class="app-quick" aria-label="Quick actions and clinic address">
+<div class="container">
+<div class="aq-grid">
+<a href="tel:+919493647007"><i class="fa-solid fa-phone"></i><span>Call</span></a>
+<a href="https://wa.me/919493647007" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Chandragiri+Road,+Tirupati,+Andhra+Pradesh+517502" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-location-dot"></i><span>Directions</span></a>
+<a href="#page-appointment"><i class="fa-solid fa-calendar-check"></i><span>Book</span></a>
+</div>
+<div class="aq-card"><i class="fa-solid fa-hospital"></i><div><b>Sri Sai Dental Clinic &amp; Implant Center</b><span>Vidya Nagar, Opp. Sumapreethi Furnitures, Chandragiri Road, Tirupati 517502</span></div></div>
+</div>
+</section>
+<section class="home-services" id="home-services" aria-labelledby="hsTitle">
+<div class="container">
+<div class="hs-head"><div><span class="hs-kicker">Our Services</span><h2 id="hsTitle">Dental care for every smile</h2></div>
+<a class="btn btn-primary hs-all" href="#page-services"><i class="fa-solid fa-tooth"></i> View All Services</a></div>
+<div class="hs-grid">
+<a href="#service-general"><i class="fa-solid fa-tooth"></i><b>General Dentistry &amp; Cleaning</b></a>
+<a href="#service-implants"><i class="fa-solid fa-teeth"></i><b>Dental Implants</b></a>
+<a href="#service-braces"><i class="fa-solid fa-teeth-open"></i><b>Braces &amp; Orthodontics</b></a>
+<a href="#service-root-canal"><i class="fa-solid fa-syringe"></i><b>Root Canal Treatment</b></a>
+<a href="#service-gum-care"><i class="fa-solid fa-hand-holding-medical"></i><b>Gum Care &amp; Treatment</b></a>
+<a href="#service-whitening"><i class="fa-solid fa-face-smile"></i><b>Teeth Whitening &amp; Extractions</b></a>
+</div></div></section>
 <!-- ==============================
      STATS
 ================================ -->
@@ -3113,7 +3298,7 @@ img[loading="lazy"] { content-visibility:auto; }
 <div class="container">
 <div class="about-grid">
 <div class="about-image">
-<img alt="Modern dental clinic chair and equipment" decoding="async" fetchpriority="high" height="560" loading="eager" src="image.jpg.jpeg" width="900"/>
+<img alt="Modern dental clinic chair and equipment" decoding="async" height="560" loading="lazy" src="image.jpg.jpeg" width="900"/>
 <div class="experience">
 <strong>10+</strong>
 
@@ -3148,7 +3333,7 @@ img[loading="lazy"] { content-visibility:auto; }
                         Hygienic and safe environment
                     </li>
 </ul>
-<a class="btn btn-solid" href="#page-appointment">
+<a class="btn btn-solid" href="#page-about">
 
                     Learn More
 
@@ -3164,7 +3349,7 @@ img[loading="lazy"] { content-visibility:auto; }
 <div class="container">
 <div class="doctor-grid">
 <div class="doctor-image">
-<img alt="Woman wearing a medical mask" decoding="async" height="500" loading="lazy" src="https://images.unsplash.com/photo-1601055412977-238b96530c85?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900"/>
+<img alt="Dentist wearing a surgical mask" decoding="async" height="500" loading="lazy" src="https://images.unsplash.com/photo-1601055412977-238b96530c85?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900"/>
 </div>
 <div class="doctor-info">
 <span>Meet Your Dentist</span>
@@ -3184,7 +3369,7 @@ img[loading="lazy"] { content-visibility:auto; }
                     With extensive expertise in periodontics and dental implantology, her focus is on gentle, long-lasting, and aesthetic dental care.
                 </p>
 <br/>
-<a class="btn btn-solid" href="#page-appointment">
+<a class="btn btn-solid" href="#page-dentist">
 
                     Meet the Dentist
 
@@ -3228,9 +3413,7 @@ img[loading="lazy"] { content-visibility:auto; }
 <div class="logo-img-wrapper">
 <img alt="Sri Sai Dental Clinic Logo" src="logo.png"/>
 </div>
-<div class="logo-text">
-                        SRI SAI
-                        <span style="color:#d8b36a;">Dental Clinic &amp; Implant Center</span>
+<div class="logo-text"><strong class="logo-title" aria-label="SRI SAI"><b>S</b><b>R</b><b>I</b><b class="sp"></b><b>S</b><b>A</b><b>I</b></strong><span style="color:#d8b36a;">Dental Clinic &amp; Implant Center</span>
 </div>
 </div>
 <br/>
@@ -3776,7 +3959,7 @@ Message: ${message || "No additional message."}`;
     } else if(key==='about'){
       html=shell(pageData.about,`<div class="page-two-col page-reveal delay-1"><img class="page-image" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=85" alt="Modern dental clinic" loading="lazy"><div><div class="section-title"><h2>Care built around the patient</h2><p>${esc(pageData.about.body)}</p></div><ul class="page-list"><li><i class="fa-solid fa-circle-check"></i>Expert Periodontist & Implantologist</li><li><i class="fa-solid fa-circle-check"></i>Modern dental technology</li><li><i class="fa-solid fa-circle-check"></i>Patient-centered treatment</li><li><i class="fa-solid fa-circle-check"></i>Hygienic and safe environment</li></ul></div></div>`);
     } else if(key==='dentist'){
-      html=shell(pageData.dentist,`<div class="page-two-col page-reveal delay-1"><img class="page-image" src="https://images.unsplash.com/photo-1657470179442-12be86434e22?auto=format&fit=crop&w=1100&q=85" alt="Dr. M. Haritha" loading="lazy"><div class="page-panel" style="margin-top:0"><span class="page-kicker">MDS</span><h2 style="font-family:'Playfair Display',serif;font-size:38px;color:#17383e;margin:0 0 12px">Dr. M. Haritha</h2><p style="color:#64777b;line-height:1.8">${esc(pageData.dentist.body)}</p><ul class="page-list"><li><i class="fa-solid fa-circle-check"></i>Periodontal and implant-focused care</li><li><i class="fa-solid fa-circle-check"></i>Individualized treatment planning</li><li><i class="fa-solid fa-circle-check"></i>Patient comfort and clear guidance</li></ul></div></div>`);
+      html=shell(pageData.dentist,`<div class="page-two-col page-reveal delay-1"><img class="page-image" src="https://images.unsplash.com/photo-1657470179442-12be86434e22?auto=format&fit=crop&w=1100&q=85" alt="Dentist wearing a surgical mask" loading="lazy"><div class="page-panel" style="margin-top:0"><span class="page-kicker">MDS</span><h2 style="font-family:'Playfair Display',serif;font-size:38px;color:#17383e;margin:0 0 12px">Dr. M. Haritha</h2><p style="color:#64777b;line-height:1.8">${esc(pageData.dentist.body)}</p><ul class="page-list"><li><i class="fa-solid fa-circle-check"></i>Periodontal and implant-focused care</li><li><i class="fa-solid fa-circle-check"></i>Individualized treatment planning</li><li><i class="fa-solid fa-circle-check"></i>Patient comfort and clear guidance</li></ul></div></div>`);
     } else if(key==='reviews'){
       html=shell(pageData.reviews,`<div class="review-system page-reveal delay-1">
         <div class="review-summary-card">
@@ -3915,12 +4098,16 @@ Message: ${message || "No additional message."}`;
 <i class="fa-solid fa-calendar-check"></i>
 <span>Book</span>
 </a>
-<a aria-label="Reviews" href="#page-reviews">
-<i class="fa-solid fa-star"></i>
-<span>Reviews</span>
+<a aria-label="Call the clinic" href="tel:+919493647007">
+<i class="fa-solid fa-phone"></i>
+<span>Call</span>
+</a>
+<a aria-label="WhatsApp the clinic" href="https://wa.me/919493647007" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+<span>WhatsApp</span>
 </a>
 </nav>
-<script>const sd=document.getElementById("serviceDropdown"),sb=document.getElementById("servicesMenuBtn");if(sd&&sb)sb.onclick=e=>{if(innerWidth<=900){e.preventDefault();sd.classList.toggle("open")}}</script>
+<script>const sd=document.getElementById("serviceDropdown"),sb=document.getElementById("servicesMenuBtn");if(sd&&sb)sb.onclick=e=>{if(innerWidth<=900){sd.classList.remove("open")}}</script>
 <script id="patient-review-system-js">
 (function(){
   const KEY='sriSaiDentalReviewsV1';
@@ -4015,5 +4202,53 @@ Message: ${message || "No additional message."}`;
   <a href="tel:+919493647007" aria-label="Call clinic">☎ Call</a>
   <a href="#page-appointment" aria-label="Book an appointment">📅 Book Appointment</a>
 </div>
+<script>
+/* Logo: trim blank edges from the logo image and line the two text lines up */
+(function(){
+  var cache={};
+  function trim(img){
+    if(img.dataset.trimmed||!img.naturalWidth)return;
+    img.dataset.trimmed='1';
+    var src=img.currentSrc||img.src;
+    function apply(u,w,h){img.src=u;img.width=w;img.height=h;}
+    if(cache[src]){apply(cache[src].u,cache[src].w,cache[src].h);return;}
+    try{
+      var w=img.naturalWidth,h=img.naturalHeight,c=document.createElement('canvas');
+      c.width=w;c.height=h;var x=c.getContext('2d');x.drawImage(img,0,0);
+      var d=x.getImageData(0,0,w,h).data,x0=w,y0=h,x1=-1,y1=-1;
+      for(var y=0;y<h;y++){for(var i=0;i<w;i++){var k=(y*w+i)*4;
+        if(d[k+3]>20&&!(d[k]>242&&d[k+1]>242&&d[k+2]>242)){if(i<x0)x0=i;if(i>x1)x1=i;if(y<y0)y0=y;if(y>y1)y1=y;}}}
+      if(x1<0)return;
+      var cw=x1-x0+1,ch=y1-y0+1;if(cw===w&&ch===h)return;
+      var o=document.createElement('canvas');o.width=cw;o.height=ch;
+      o.getContext('2d').drawImage(c,x0,y0,cw,ch,0,0,cw,ch);
+      var u=o.toDataURL('image/png');cache[src]={u:u,w:cw,h:ch};apply(u,cw,ch);
+    }catch(e){/* opened from a local file: browser blocks pixel access, logo stays as is */}
+  }
+  function fit(){}
+  function run(){document.querySelectorAll('.logo-img-wrapper img').forEach(function(im){
+    if(im.complete)trim(im);else im.addEventListener('load',function(){trim(im)},{once:true});});fit();}
+  var tm;window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(fit,120)});
+  window.addEventListener('load',run);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
+</script>
+<script>
+/* Highlight the current tab in the mobile bottom bar */
+(function(){
+  var tabs=document.querySelectorAll('.mobile-bottom-nav a');
+  function mark(){
+    var h=location.hash||'#home';
+    tabs.forEach(function(a){
+      var t=a.getAttribute('href'),on=false;
+      if(t==='#home')on=(h==='#home'||h==='#');
+      else if(t==='#page-services')on=(h==='#page-services'||h.indexOf('#service-')===0);
+      else if(t==='#page-appointment')on=(h==='#page-appointment');
+      a.classList.toggle('on',on);
+    });
+  }
+  window.addEventListener('hashchange',mark);mark();
+})();
+</script>
 </body>
 </html>
