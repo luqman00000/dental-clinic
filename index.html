@@ -30,9 +30,9 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://images.unsplash.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>\n<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'"/>\n<noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/></noscript>
 <!-- Favicon -->
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E" rel="icon"/>
 <style>
@@ -3167,6 +3167,113 @@ header .logo-text span, footer .logo-text span { display: block !important; marg
  header .logo { gap: 4px !important; }
 }
 </style>
+
+<style id="responsive-core-web-vitals-upgrade">
+/* Responsive + Core Web Vitals refinement (keeps existing branding and content) */
+:root { color-scheme: light; }
+html { scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body { overflow-wrap: anywhere; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+button, a, input, select, textarea { touch-action: manipulation; }
+a, button { -webkit-tap-highlight-color: transparent; }
+.container { min-width: 0; }
+section, main, header, footer, nav, .hero, .page-shell, .premium-page { min-width: 0; }
+.hero { background-color: #087f8c; }
+.hero h1 { font-size: clamp(2rem, 4.4vw, 4.3rem); line-height: 1.08; text-wrap: balance; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+button, .btn, .nav-cta { min-height: 44px; }
+.service-card, .page-card, .feature-card, .review-card { will-change: auto; }
+@media (min-width: 1200px) {
+  .container { max-width: 1400px; }
+  .hero-content { max-width: 760px; }
+}
+@media (max-width: 900px) {
+  .container { width: min(94%, 760px); }
+  .section { padding-top: 68px; padding-bottom: 68px; }
+  .section-title { margin-bottom: 34px; }
+  .topbar-content { flex-wrap: wrap; gap: 6px 14px; }
+  .topbar-left, .topbar-right { flex-wrap: wrap; gap: 8px 14px; }
+  .nav-links { gap: 14px; }
+  .hero { min-height: 0; }
+  .hero-layout { min-height: 0; }
+  .premium-page { padding-top: 54px; padding-bottom: 72px; }
+  .page-two-col, .service-detail-grid, .service-info-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 68px; }
+  .container { width: calc(100% - 28px); }
+  .section { padding: 48px 0; }
+  .section-title { margin-bottom: 26px; }
+  .section-title h2 { font-size: clamp(1.75rem, 7vw, 2.25rem); line-height: 1.15; }
+  .section-title span { letter-spacing: 1.2px; }
+  .hero { min-height: 0; background-position: 58% center; }
+  .hero-content { padding: 46px 0 52px; }
+  .hero h1 { font-size: clamp(2.05rem, 9vw, 2.8rem); line-height: 1.08; }
+  .hero p { font-size: 1rem; line-height: 1.65; }
+  .hero .btn, .btn { width: 100%; max-width: 100%; }
+  .topbar { font-size: 11px; }
+  .topbar-content { padding: 7px 0; }
+  .topbar-left, .topbar-right { gap: 4px 10px; }
+  .premium-page { padding: 38px 0 64px; }
+  .premium-page-inner, .page-two-col { width: calc(100% - 28px) !important; }
+  .page-panel, .page-grid, .page-service-list, .service-detail-grid, .service-info-grid, .service-process, .stats-grid {
+    min-width: 0; grid-template-columns: minmax(0, 1fr);
+  }
+  .btn, .nav-cta { padding: 12px 16px; }
+  .logo-text { letter-spacing: 0 !important; }
+  .mobile-bottom-nav { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .mobile-bottom-nav a { min-height: 48px; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+}
+@media (max-width: 380px) {
+  .container { width: calc(100% - 22px); }
+  .hero h1 { font-size: clamp(1.85rem, 8.6vw, 2.2rem); }
+  .section-title h2 { font-size: 1.7rem; }
+  .logo { max-width: calc(100% - 48px) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
+
+<style id="services-click-dropdown-fix">
+/* Services menu opens only after clicking Services; never opens on hover. */
+.service-dropdown-menu {
+  top: calc(100% + 4px) !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+}
+.service-dropdown.open .service-dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translate(-50%, 0) !important;
+}
+.service-dropdown.open > #servicesMenuBtn .fa-chevron-down {
+  transform: rotate(180deg);
+}
+#servicesMenuBtn .fa-chevron-down { transition: transform .2s ease; }
+@media (max-width: 900px) {
+  .service-dropdown-menu {
+    position: static !important;
+    left: auto !important;
+    width: 100% !important;
+    transform: none !important;
+    margin-top: 6px;
+    box-shadow: none !important;
+    max-height: 48vh;
+    overflow-y: auto;
+  }
+  .service-dropdown.open .service-dropdown-menu {
+    transform: none !important;
+  }
+}
+</style>
 </head>
 <body>
 <div id="scrollProgress" aria-hidden="true"></div>
@@ -4270,39 +4377,3 @@ Message: ${message || "No additional message."}`;
 </script>
 </body>
 </html>
-
-<style id="services-click-dropdown-fix">
-/* Services menu opens only after clicking Services; never opens on hover. */
-.service-dropdown-menu {
-  top: calc(100% + 4px) !important;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translate(-50%, -8px);
-}
-.service-dropdown.open .service-dropdown-menu {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: translate(-50%, 0) !important;
-}
-.service-dropdown.open > #servicesMenuBtn .fa-chevron-down {
-  transform: rotate(180deg);
-}
-#servicesMenuBtn .fa-chevron-down { transition: transform .2s ease; }
-@media (max-width: 900px) {
-  .service-dropdown-menu {
-    position: static !important;
-    left: auto !important;
-    width: 100% !important;
-    transform: none !important;
-    margin-top: 6px;
-    box-shadow: none !important;
-    max-height: 48vh;
-    overflow-y: auto;
-  }
-  .service-dropdown.open .service-dropdown-menu {
-    transform: none !important;
-  }
-}
-</style>
