@@ -75,6 +75,13 @@ img, iframe { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .service-page, .page-reveal, .reveal-on-scroll { animation: none !important; transition: none !important; }
 }
+
+/* LCP-focused refinement: keep the above-the-fold hero immediately paintable. */
+#home{content-visibility:visible!important;contain:none!important;isolation:isolate;background-color:#087f8c!important;transition:none!important}
+#home .hero-content,#home .hero-content *{animation:none!important;animation-delay:0s!important;transition:none!important}
+#home .hero-content{opacity:1!important;transform:none!important;filter:none!important}
+#home h1,#home .hero-badge,#home p,#home .hero-buttons{opacity:1!important;transform:none!important;filter:none!important}
+@media(max-width:900px){#home{background-attachment:scroll!important}#home .hero-content{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
 </style>
 </head>
 <body>
