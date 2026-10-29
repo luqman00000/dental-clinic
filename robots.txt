@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luqman00000.github.io/dental-clinic/sitemap.xml
